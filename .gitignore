@@ -140,3 +140,5 @@ vite.config.ts.timestamp-*
 
 # custom environment variable file for is113
 config.env
+*.pdf
+*.zip
