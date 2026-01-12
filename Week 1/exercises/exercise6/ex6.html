@@ -5,7 +5,28 @@
 </head>
 <body>
      <!-- START YOUR CODE HERE -->
+    <h1>Customer Feedback Form</h1>
+    <label for="title">Title: &nbsp;</label>
+    <input type="text" id="Title" name="Title" placeholder="Title of Feedback"><br>
 
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" placeholder="Enter Your Name"><br>
+
+    <label for="type">Type: </label>
+    <select id='color' name="color">
+        <option value="Inquiries">Inquiries</option>
+        <option value="Feedback" selected>Feedback</option>
+        <option value="Suggestions">Suggestions</option>
+    </select><br>
+
+    <br><strong>Comments</strong> <br>
+    <textarea
+        id="comment"
+        name="comment"
+        rows="7"
+        cols="35">Enter your comments</textarea>
+    <br> <br>
+    <button type="submit">Submit</button>
  
      <!-- END YOUR CODE HERE -->
     

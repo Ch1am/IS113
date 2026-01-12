@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Exercise 5</title>
 </head>
+
 <body>
     <!-- START YOUR CODE HERE -->
- 
+    <h1>New User Registration</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="firstname">First Name:</label></td>
+                <td><input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="lastname">Last Name:</label></td>
+                <td><input type="text" id="lastname" name="lastname" placeholder="Enter Your Last Name">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="Enter Your Email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </td>
+            </tr>
+        </table>
+
+        <h3>INTEREST</h3>
+        <label>Select all that apply:</label><br>
+        <input type="checkbox" id="mgame" name="INTEREST" value="Mobile Games">
+        <label for="mgame">Mobile Games</label>
+        <input type="checkbox" id="pcgame" name="INTEREST" value="PC Games">
+        <label for="pcgame">PC Games</label><br>
+        <input type="checkbox" id="playstation" name="INTEREST" value="Playstation">
+        <label for="playstation">Playstation</label>
+        <input type="checkbox" id="xbox" name="INTEREST" value="XBox">
+        <label for="xbox">XBox</label><br>
+        
+        <br>
+        <button type="submit">Submit</button>
+    </form>
     <!-- END YOUR CODE HERE -->
 </body>
+
 </html>
