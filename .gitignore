@@ -142,3 +142,4 @@ vite.config.ts.timestamp-*
 config.env
 *.pdf
 *.zip
+*.DS_Store
