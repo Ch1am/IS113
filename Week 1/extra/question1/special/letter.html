@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <Head>
-    <title>Letter to Justin Babe</title> 
+    <title>Letter to Justin Babe</title>
 </Head>
 
 
@@ -10,62 +11,49 @@
 
     <!-- Part F -->
     <h2>Send Your Love to Justin</h2>
-    
-    <img src="../images/justin4.gif" >
+
+    <img src="../images/justin4.gif">
 
 
     <form>
-        <table>
-            <tr>
-                <td><label for="fname">Full Name:</label></td>
-                <td><input type="text" id="fname" name="fname" placeholder="Enter Your Full Name"></td>
-            </tr>
-            <tr>
-                <td><label for="age">Age:</label></td>
-                <td><input type="number" id="age" name="age"></td>
-            </tr>
-            <tr>
-                <td><label for="gender">Gender:</label></td>
-                <td>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter Your Full Name">
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <label for="gender">Gender:</label>
+        <select id='gender' name="gender">
+            <option value="Male">Male</option>
+            <option value="Female" selected>Female</option>
+        </select>
+        <br>
+        <label for="rstatus">Relationship Status (please be truthful):</label><br>
+        <input type="radio" id="single" name="rstatus" value="Single">
+        <label for="single">Single</label><br>
+        <input type="radio" id="attached" name="rstatus" value="Attached">
+        <label for="attached">Attached</label><br>
+        <input type="radio" id="complicated" name="rstatus" value="Complicated">
+        <label for="complicated">Complicated</label><br>
 
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="gender">Relationship Status (please be truthful):</label></td>
-                <td>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
+        <label for="songs[]">Favorite Justin Songs: </label>
+        <br>
+        <input type="checkbox" id="sorry" name="songs[]" value="Sorry">
+        <label for="sorry">Sorry</label><br>
+        <input type="checkbox" id="baby" name="songs[]" value="Baby">
+        <label for="baby">Baby</label><br>
+        <input type="checkbox" id="boyfriend" name="songs[]" value="Boyfriend">
+        <label for="boyfriend">Boyfriend</label><br>
+        <input type="checkbox" id="letlove" name="songs[]" value="Let Me Love You">
+        <label for="letlove">Let Me Love You</label><br>
+        <input type="checkbox" id="idc" name="songs[]" value="I Don't Care">
+        <label for="idc">I Don't Care</label><br>
+        <label for="comment">Message to Justin:</label>
+        <br>
+        <textarea id="comment" name="comment" rows="3" cols="50"> </textarea>
+        <br>
+        <button type="submit">Send My Love to Justin!</button>
 
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="favsong">Favorite Justin Songs: </label></td>
-                <td>
-                    <select id='favsong' name="favsong">
-                        <option value="Sorry">Sorry</option>
-                        <option value="Baby" selected>Baby</option>
-                        <option value="Boyfriend">Boyfriend</option>
-                        <option value="Let Me Love You">Let Me Love You</option>
-                        <option value="I Don't Care">I Don't Care</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="comment">Message to Justin:</label></td>
-                <td>
-                    <textarea id="comment" name="comment" rows="4" cols="30">Your message to Justin... </textarea>
-                </td>
-            </tr>
-            <tr>
-                <td><button type="submit">Send My Love to Justin!</button></td>
-            </tr>
-        </table>
 
     </form>
 
