@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome</title>
+</head>
+<body>
+
+	<script>
+		let str = prompt("If you provide a string, I will tell you if it is a Palindrome!");
+        
+        // TODO: add your code here
+		let newStr = str.toLowerCase().split("").reverse().join("");
+		if (newStr == str.toLowerCase()){
+			alert(`${str} is a palindrome!`)
+		}
+		else{
+			alert(`${str} is NOT a palindrome!`)
+		}
+
+	</script>
+</body>
+</html>

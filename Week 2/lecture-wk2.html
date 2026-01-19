@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 - JavaScript</title>
+</head>
+<body>
+    <p>Hello JavaScript</p>
+     
+    <script>
+        /*
+            Basic Syntaxes
+                variable declaration
+                naming convention: camelCase
+                condition
+                function definition / function call
+                loop  
+                    explore for...of loop and for...in loop
+       
+        */
+     
+        let x = 10 //if you declare a variable with let keywork, you cannot redeclare it within the same scope
+        var y = 11
+        // const z = "constant a value"
+        // z = "another value" wll cause an error
+
+        //keywork: let vs var -> block scope vs function scope
+        if (x==10){
+            x = 11 //this variable let x only work within this if-block
+        } else{
+            //do nothing
+        }
+        console.log(x)
+
+        /*
+            Data types
+        */
+        let num = 10; // number
+        let str = "a string"; // string
+        let anotherfruits = ['apple', 'orange', 'banana']; // array
+        let isValid = true; // boolean
+
+        //object can have properties and methods
+        let obj = {
+            name: 'Jack', //property
+            age: 21, // another property
+
+            updateAge() { //method
+                this.age++ //if you want to access properties within the object method always use the keyword 'this'
+
+                let age = 21 // this a var not a property, basically a local var
+                // age = age + 1, will cause ref error undefined unless declared above
+            }
+
+        }
+
+        obj.updateAge()
+        console.log(obj.age)
+
+        let fName = "Jack"
+        let lName = "Jesper"
+        var fullName = fName + " " + lName // + => concatneation when used with strings
+
+        let num1 = '10'// data type: string
+        let num2 = 5 //data type: number
+        console.log(num1 / num2) //value -> NaN, the data type of NaN is number
+
+       /*
+        Debugging 
+            1. Use console.log()
+            2. Check the Browser Console
+            3. Use Breakpoints in Developer Tools
+                Go to the Sources tab
+                Click on a line number to pause execution
+                Step through your code line by line
+       */
+
+        /*   
+            Error handling: try .. catch .. finally
+        */
+
+
+
+       /*
+        built-in functions
+            string operations
+                indexOf, lastIndecOf, slice, trim, toLowerCase, 
+                replace, split, ...
+
+            array operations
+                isArray, slice, join, reverse, sort, push, pop, shift, unshift, ...
+
+            anotherfruits.push('peach');
+            anotherfruits.shift();
+            anotherfruit.sort();
+            console.log(anotherfruits);
+
+            obj operations:
+                Object.keys, Object.values, Object.entries, ...
+
+            Number operations:
+                isNaN, Number, parseInt, ...
+
+            Utilities:
+                prompt, alert, length, ...
+            let aNumber = prompt("Give a number")
+            alert("welcome to IS115")
+            let aString = "hello JavaScript"
+            // extract the substring 'JavaScript' from a given string
+            aString = aString.toLowerCase() // convert to lowercase in case
+            aString.indexOf('javascript')
+            
+            let idx = aString.indexOf('javascript')
+
+            console.log(idx)
+            let extractedString = aString.substring(idx)
+            console.log(extractedSstring)
+       */
+        function foo2(){
+            return "Jack";
+        }
+        // In programming, expression means something (statement, condition, or function call, that evaluates)
+        function foo(x,y){
+            console.log(`${x} : ${y}`); //backtick ` -> useful for printing variable as a string
+
+            console.log(`name: ${foo2()}`) // within ${}, you can write JS expression
+
+            console.log(`${'A' < 'B'}`)
+        }
+        //function invocation
+        // foo("Black", "Jack");
+
+        let fruits = ['apple', 'orange', 'banana']
+
+        for (let fruit of fruits){ //basically for ch in string 
+            console.log(fruit)
+        }
+        
+        for (let i=0; i < fruits.length;i++){
+            console.log(fruits[i])
+        }
+
+       /* 
+        try exercises 1-3
+            explore prompt, alert, Number, isNaN
+       */
+
+       /*
+        ex4
+            explore str.length, obj[prop]
+           
+       */
+
+      
+       /*
+        try ex5 -- explore the string/array operations like replace, split, join, reverse
+       */
+
+       /*
+        functions
+            named function
+            anonymous function
+            arrow function
+            callbacks
+            function as object
+       */
+
+       // named function
+        function foo4(){
+          console.log("in foo4");  
+        };
+       // anonymous function
+        let foo5 = function(){
+            console.log("in foo5");
+        };
+
+        // you define function foo6 which take in a function f as an argument/input
+        function foo6(f){
+            f() //since f argument is a function, you can invoke it e.g. ()
+        };
+
+        foor6(foo5) // you are passing in foo5 function as a function argument
+
+        function negate(f){
+            return function(i){
+                !f(i)
+            }
+        }
+        let isNumber = negate(isNaN)
+        console.log(isNumber)
+        console.log(isNumber(5))
+
+       // arrow function
+        
+
+        /* 
+        callbacks:
+            setTimeout, filter, find, map, forEach
+
+        challenge:
+            given an array of numbers, e.g., [ 1, 5, 6, 8, 9, 11, 13, 14], use filter function to retrieve only even numbers
+           
+       */
+
+        
+       /* function as object
+        Challenge: create a function which negates a given function
+        e.g., given isNaN, the function should return !isNaN
+
+       */
+
+       /* 
+            try ex6 after learning deep about functions
+       */
+
+   
+
+     
+
+        
+       
+
+
+    </script>
+
+</body>
+</html>

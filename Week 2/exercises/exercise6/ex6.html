@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions as parameters</title>
+</head>
+<body>
+
+    <script>
+
+        /*
+        TASK OVERVIEW:
+        Define a function named `apply` that takes:
+        - a function (e.g., `incr`) as the first parameter, and
+        - an array as the second parameter.
+
+        The `apply` function should:
+        - Apply the given function to each element of the array, one by one.
+        - Return a new array containing the results.
+
+        Example 1:
+        function incr(x) { return 2 * x; }
+        apply(incr, [1, 2, 3]); 
+        // expected result: [2, 4, 6]
+
+        Example 2:
+        apply(Number, ["string", 5, this, NaN])
+        // expected result: [NaN, 5, NaN, NaN]
+
+        HINT:
+        - You may want to use a `for` loop.
+        - Create a new array and `push` the result of calling the function on each element.
+
+        Start coding your `apply` function below:
+        */
+        function apply(func, arr) {
+            let newArr = []
+            for(let i = 0; i < arr.length; i++){
+                newArr.push(func(arr[i]))
+            }
+            return newArr
+        }
+
+        function incr(x) { return 2 * x; }
+        let a = apply(incr, [1, 2, 3]);
+        console.log(a)
+        let b = apply(Number, ["string", 5, this, NaN])
+        console.log(b)
+    </script>
+    
+</body>
+</html>

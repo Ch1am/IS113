@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+</head>
+<body>
+
+	<p>Objects are references</p>
+
+	<script>
+        //TODO: insert the code from the slide, and output the value of newperson.firstName and newcars[0]
+        //use: console.log(x) to display x on the console.
+		let cars = [ "Saab", "Volvo", "BMW" ];
+		let newCars = cars;
+		let person = { firstName: "Ariana", lastName: "Grande", age: 70 };
+		let newPerson = person;
+		person.firstName = "Prince";
+		cars[0] = "Honda";
+		console.log(cars)
+		console.log(person)
+	</script>
+</body>
+</html>
