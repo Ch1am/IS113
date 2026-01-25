@@ -15,6 +15,13 @@
 
         function getOperation(op) {
             // YOUR CODE GOES HERE
+            if (op === "add") {
+                return (a, b) => a + b;
+            } else if (op === "mul") {
+                return (a, b) => a * b;
+            } else {
+                return () => NaN;
+            }
         }
 
         const addFn = getOperation("add");

@@ -19,7 +19,7 @@
     <button onclick="showExtra11()">Extra11!</button>
 
     <br>
-    <p id="result">test</p>
+    <p id="result"></p>
 
     <script>
         /* 1. Write a function that computes and prints out the area and circumference of a circle of a given radius. 
@@ -30,16 +30,16 @@
         · Area of circle = π X radius2
         · Circumference of circle = π X 2 X radius 
         */
-        
+        const resultlabel = document.getElementById("result")
         function showExtra1() {
 
             // Add Code Here
-            let radius = Number(prompt("Provide a radius!"))
-            let area = Math.PI * (radius**2)
-            let circum = Math.PI * 2 * radius
-            let result = `Area:${area}\nCircumference:${circum}`
+            let radius = Number(prompt("Provide a radius!"));
+            let area = Math.PI * (radius**2);
+            let circum = Math.PI * 2 * radius;
+            let result = `Area: ${area}\nCircumference: ${circum}`;
             console.log(result);
-            document.getElementById("result").innerHTML(result);
+            resultlabel.innerHTML = result;
         }
 
 
@@ -48,15 +48,15 @@
                 Note: use Math.random(), Math.floor()
         */
         function showExtra2() {
-            let alpha = 'abcdefghijklmnopqrstuvwxyz'
-            var newPass = ""
+            let alpha = 'abcdefghijklmnopqrstuvwxyz';
+            var newPass = "";
             // Add Code Here
             for(i = 0; i<8; i++){
-                let ranNum = Math.floor(Math.random())
-                let newChar = alpha.charAt(ranNum)
-                newPass += newChar
+                let ranNum = Math.floor(Math.random() * 8);
+                let newChar = alpha.charAt(ranNum);
+                newPass += newChar;
             }
-            return newPass
+            resultlabel.innerHTML = `Generated Password: ${newPass}`;
             
         }
 
@@ -73,7 +73,18 @@
         function showExtra3() {
             
             // Add Code Here
-            
+            let perfect = 'Not Perfect Number!';
+            let num = Number(prompt("Pleasse provide a number!"));
+            let sum = 0;
+            for (i=0;i < num; i++){
+                if(num%i == 0){
+                    sum += i;
+                }
+            }
+            if(num == sum){
+               perfect = 'Perfect Number!';
+            }
+            resultlabel.innerHTML = perfect;
         }
 
 
@@ -83,7 +94,12 @@
         function showExtra4() {
             
             // Add Code Here
-            
+            let num = Number(prompt("Pleasse provide an integer!"));
+            while(!Number.isInteger(num)){
+                num = prompt("Pleasse provide a valid integer!");
+            }
+            let result = num.toString(2)
+            resultlabel.innerHTML = result;
         }
 
 
@@ -104,7 +120,20 @@
         function showExtra5() {
             
             // Add Code Here
-            
+            let name = prompt('Please provide your name!')
+            nameList = name.split(" ")
+            if(nameList.length == 1){
+                nameList[0] = nameList[0].toUpperCase()
+            }
+            else if(nameList.length == 2){
+                let surname = nameList[1].toUpperCase()
+                nameList[1] = nameList[0]
+                nameList[0] = surname
+            }
+            else{
+                nameList[0] = nameList[0].toUpperCase()
+            }
+            resultlabel.innerHTML = nameList.join(" ")
         }
 
 
@@ -138,8 +167,27 @@
         function showExtra6() {
             
             // Add Code Here
-            
+            let txt = prompt("Enter the string");
+            let st = prompt("Enter the start char");
+            let en = prompt("Enter the end char");
 
+            let result = "";
+
+            if (txt.includes(st) && txt.includes(en)) {
+                let stIdx = txt.indexOf(st);
+                // start the search at stIdx position onwards
+                // return -1 if en is not found
+                let enIdx = txt.indexOf(en, stIdx);
+                if (enIdx != -1) {
+                    result = "Substring [" + txt.slice(stIdx, ++enIdx) + "] is found";
+                } else {
+                    result = "No such substring";
+                }
+            } else {
+                result = "No such substring";
+            }
+
+            resultlabel.innerHTML = result;
         }
 
         /* 7. Write a function that asks the user to enter two strings, 
@@ -164,7 +212,22 @@
         function showExtra7() {
             
             // Add Code Here
-            
+            let str1 = prompt("Please enter a string!");
+            let str2 = prompt("Please enter another string!");
+            let allIn = true;
+
+            for (let ch of str1) {
+                if (!str2.includes(ch)) {
+                    allIn = false;
+                    break;
+                }
+            }
+
+            if (allIn) {
+                resultlabel.innerHTML = "Bingo!";
+            } else {
+                resultlabel.innerHTML = "Nope :(";
+            }
         }
 
 
@@ -183,7 +246,20 @@
         function showExtra8() {
             
             // Add Code Here
-            
+            let min = prompt("Please enter a min number!");
+            let max = prompt("Please enter a max number!");
+            let result = "";
+
+            if (isNaN(min) || isNaN(max)) {
+                alert("You did not enter valid number!")
+            } else {
+                let num = Math.ceil(Math.sqrt(min));
+                while (Math.pow(num, 2) <= max) {
+                    result += Math.pow(num, 2) + " ";
+                    num++;
+                }
+                resultlabel.innerHTML = result;
+            }
         }
 
 
@@ -206,7 +282,41 @@
         function showExtra9() {
             
             // Add Code Here
-            
+            let numbers = prompt("Please enter a set of integer numbers, each number separated by a space!");
+            let min, max, median, len, i;
+            let arr = numbers.split(" ");
+            len = arr.length;
+
+            isValid = true;
+            let num_arr = [];
+            for (let ele of arr) {
+                let num = Number(ele);
+                if (!Number.isInteger(num)) {
+                    alert("You entered an invalid integer!");
+                    isValid = false;
+                    break;
+                }
+                num_arr.push(num)
+            }
+
+            if (isValid) {
+                // sort() sorts the array alphabetically (not numerically)
+                // to sort numerically, use callback function
+                num_arr.sort(function (a, b) { return a - b }); // this sort in ascending order. for descending order, use b-a
+                min = num_arr[0];
+                max = num_arr[len - 1];
+
+                if (len % 2 == 0) { // even numbers
+                    i = len / 2;
+                    median = (num_arr[i - 1] + num_arr[i]) / 2;
+                } else { // odd numbers
+                    i = Math.floor(len / 2);
+                    median = num_arr[i];
+                }
+
+                result = ("Numbers: " + num_arr + "<br>Min: " + min + "<br>Max: " + max + "<br> Median: " + median);
+                resultlabel.innerHTML = result;
+            }
         }
 
 
@@ -226,7 +336,18 @@
             var persons2 = [{name:"Mary",age:23}, {name:"Jennifer",age:32}];
             
             // Add Code Here
+            let persons = persons1.concat(persons2);
+
+            persons.sort(function (a, b) { return a.age - b.age });
+            console.log(persons);
+
+            let result = "";
+
+            for (let person of persons){
+                result += "Name: " + person.name + "; Age: " + person.age + "<br>"
+            }
             
+            resultlabel.innerHTML = result;
             
         }
 
@@ -241,7 +362,15 @@
         function showExtra11() {
             
             // Add Code Here
-            
+            let items = [{ name: "chicken", price: 4.5 }, { name: "cabbage", price: 1.95 },
+            { name: "milk", price: 2.4 }, { name: "eggs", price: 2 }];
+
+            let result = 0;
+            for (let item of items) {
+                result += item.price;
+            }
+            result = ("Amount to be paid: $" + result);
+            resultlabel.innerHTML = result;
         }
 
     </script>

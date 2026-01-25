@@ -14,6 +14,11 @@
 
         const calculator = {
             // YOUR CODE GOES HERE
+            add: (a, b) => a + b,
+            sub: (a, b) => a - b,
+            apply: function(op, a, b) {
+                return this[op](a, b);
+            }
         };
 
         console.log(calculator.apply("add", 5, 2)); // Output: 7
