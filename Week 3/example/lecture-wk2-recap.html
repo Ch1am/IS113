@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - JavaScript</title>
+  </head>
+
+
+  <body>
+    <h1>Hello JavaScript & HTML</h1>
+    <!-- 
+        HTML Recap
+            form
+            input fields
+            dropdown menu
+            submit
+    -->
+    <!--
+      Action attr specifies to which resource you are sending a HTTP request to method 
+      after specifics how you want to send the request (POST/GET)
+    -->
+    <form action="test.html" method="get" >
+      Select your favorite course:
+      <!-- input:checkbox*3 and hit tab -->
+       <label for="is113">IS113</label>
+      <input type="checkbox" name="courses" id="is113" value="is113">
+      <label for="IS111">IS111</label>
+      <input type="checkbox" checked name="courses" id="IS111" value="IS111">
+      <label for="is110">IS110</label>
+      <input type="checkbox" name="courses" id="is110" value="IS110">
+
+      <select name="courses2" id="course2">
+        <option value="is113">IS113</option>
+        <option value="is111" selected>IS111</option>
+        <option value="is110">IS110</option>
+      </select>
+
+      <label for="IS113c">IS113</label>
+      <input type="radio" name="course3" id="IS113c">
+      <label for="IS111c">IS111</label>
+      <input type="radio" checked name="course3" id="IS111c">
+      <label for="IS110c">IS110</label>
+      <input type="radio" name="course3" id="IS110c">
+      <hr>
+      <input type="submit" value="submit">
+      <button type="button">submit</button>
+    </form>
+   
+  
+    <script>
+      /*
+        Data types: String, Number, Boolean, Array, Object, Undefined
+      */
+      let x // datatype ?
+      console.log(typeof x)
+      
+      let y = null // value ? datatype ?
+      console.log(typeof y) // object
+
+      /*
+        objects
+            access property using . notation
+            access property using [] notation
+            access the name of the properties using Object.keys
+
+        task: 
+            1. ask the user to provide a property to access
+            2. print the value of the user-provided property in the console
+        */
+      // let prop = prompt('Give me the property of the user that you want to access')
+      let user = {
+        name: "Jack",
+        age: 21,
+        updateAge: function () {
+          this.age = this.age + 1;
+        },
+      };
+      // console.log(user.name) // property must be literial
+      // console.log(user[prop]) // property become a variable 
+      console.log(Object.values(user))
+
+    
+      /*   
+        Error handling: try .. catch .. finally
+
+        Task: 
+            1. write code that contains some error
+            2. handle that error neatly (no red-color error) using try..catch 
+      */
+      try {
+        // let x = Number("string") // NaN
+        let x = foo
+      } catch (error){
+        //error handling code
+        console.log(error.message)
+      } finally{
+        console.log("do this regardless of error or not")
+
+      }
+
+      /*
+        built-in functions
+            string operations
+                indexOf, lastIndexOf, slice, trim, toLowerCase, includes,
+                replace, split, ...
+
+            array operations
+                isArray, slice, join, reverse, sort, push, pop, shift, unshift, ...
+
+            obj operations:
+                Object.keys, Object.values, Object.entries, ...
+
+            Number operations:
+                isNaN, Number, parseInt, ...
+
+            Utilities:
+                prompt, alert, length, ...
+       */
+
+       /*
+          Task:
+              implement replaceANumber(arr, numberToFind, numberToReplace) below so that it
+                  1. checks if arr is an array. If arr is not an array, return null
+                  2.  checks if numberToFind exists in arr
+                  3. if yes, replace numberToFind with numberToReplace
+                  4. return the modified arr (in which numberToFind was replaced with numberToReplace )
+              Hint: explore isArray, includes, indexOf, splice, slice
+       */
+      function replaceANumber(arr, numberToFind, numberToReplace) {
+
+            // add code here
+            if (Array.isArray(arr)){
+              if (arr.includes(numberToFind)){
+                let x = arr.indexOf(numberToFind)
+                arr[x] = numberToReplace
+                return arr
+              }
+              else{
+                return arr
+              }
+            }
+            else{
+              return null
+            }
+           
+            return null
+      }
+      console.log(replaceANumber("not an array", 40, 45)) // => null
+      console.log(replaceANumber([10, 20, 30, 40, 50], 40, 45)) // => [10, 20, 30, 45, 50]
+      console.log(replaceANumber([10, 20, 30, 40, 50], 60, 65)) // => [10, 20, 30, 40, 50]
+
+      /*
+        functions
+            arrow function 
+              () => { }
+              x => x*x
+            callbacks: setTimeout, filter, find, map, forEach
+
+        task 1: use setTimeout function to generate a message after 1 second delay
+
+        task 2:
+            given an array of numbers, e.g., [ 1, 5, 6, 8, 9, 11, 13, 14], use filter function to retrieve only even numbers
+            using arrow syntax
+
+        task 3:
+            given an array of numbers, use map function to compute the square of each number 
+           
+       */
+      //let f = function() { console.log("time out after 1 sec") }
+      // arrow syntax / lamda function
+      // let g = () => {(console.log("time out after 1 sec"))}
+      // setTimeout(g, 1000)
+      setTimeout( () => {console.log("timeout after 1 sec")}, 1000)
+
+
+      let aNums = [ 1, 5, 6, 8, 9, 11, 13, 14, 16]
+       
+      // let evens = aNums.filter( (aNums) => 
+      //   aNums % 2 == 0
+      // )
+
+      let h = (num) => {
+        return num%2 ==0
+      }
+      let evens = aNums.filter(h) // h is called a "callback" function
+
+      let odd = aNums.filter(num => num%2 ==1)
+
+      // argument x represent each element in aNums array
+      let squares = aNums.map((x) => x ** 2);
+
+      // use map to return the square of the indices of the given aray
+      /* map is a builtin JS function, designed to invoke a callback function you define and it will pass in three argument --
+       value, index, arr (the entire array) of the given array. e,g.., aNums */
+      let squareOfIndices = aNums.map((value, index, arr) => {
+        return index**2
+      })
+
+      console.log(evens)
+      console.log(odd)
+      console.log(squares)
+    </script>
+  </body>
+</html>

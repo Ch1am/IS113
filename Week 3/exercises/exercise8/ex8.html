@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8 - Single Export (CommonJS)</title>
+</head>
+<body>
+  <h1>Exercise 8</h1>
+  <p>
+    Simulate a “default export” style in CommonJS by exporting a single function directly 
+    with <code>module.exports = functionName</code>. 
+    You can still attach additional functions as properties.
+  </p>
+
+  <h3>Tasks</h3>
+  <ol>
+    <li>In <code>logger.js</code>, define two functions: <code>log(message)</code> and <code>warn(message)</code>.</li>
+    <li>Export <code>log</code> as the main function using <code>module.exports = log</code>.</li>
+    <li>Also attach <code>warn</code> to the same export object.</li>
+    <li>In <code>app.js</code>, import and call both functions.</li>
+  </ol>
+
+  <h3>Expected Output</h3>
+  <pre>
+LOG: Hello from Exercise 8
+WARNING: Heads up!
+  </pre>
+</body>
+</html>

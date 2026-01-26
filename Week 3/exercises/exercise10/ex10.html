@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 10 - Composing Multiple Modules (CommonJS)</title>
+</head>
+<body>
+  <h1>Exercise 10</h1>
+  <p>
+    Combine several CommonJS modules into a small program. 
+    This mirrors how larger applications organize code across multiple files.
+  </p>
+
+  <h3>Tasks</h3>
+  <ol>
+    <li>In <code>math.js</code>, export <code>add(a, b)</code> and <code>subtract(a, b)</code>.</li>
+    <li>In <code>constants.js</code>, export constants <code>PI</code> and <code>E</code>.</li>
+    <li>In <code>formatter.js</code>, export a single function <code>formatResult(x)</code> as the module’s value.</li>
+    <li>In <code>index.js</code>, import everything, compute <code>add(PI, E)</code>, format the result, and log it.</li>
+  </ol>
+
+  <h3>Expected Output</h3>
+  <pre>
+Result: 5.14
+  </pre>
+</body>
+</html>

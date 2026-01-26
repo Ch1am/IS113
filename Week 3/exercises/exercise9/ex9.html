@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 9 - Aliasing and Whole-Module Import (CommonJS)</title>
+</head>
+<body>
+  <h1>Exercise 9</h1>
+  <p>
+    Practice two CommonJS patterns that mirror ES Modules:
+    <ul>
+      <li>Renaming a named import during destructuring.</li>
+      <li>Importing the entire module object.</li>
+    </ul>
+  </p>
+
+  <h3>Tasks</h3>
+  <ol>
+    <li>In <code>shapes.js</code>, create and export functions <code>areaCircle(r)</code>, <code>areaSquare(s)</code>, and <code>areaTriangle(b, h)</code>.</li>
+    <li>In <code>app.js</code>, import <code>areaCircle</code> but rename it to <code>circleArea</code>.</li>
+    <li>Also import the entire module as <code>shapes</code>.</li>
+    <li>Log results of <code>circleArea(3)</code>, <code>shapes.areaSquare(4)</code>, and <code>shapes.areaTriangle(3, 4)</code>.</li>
+  </ol>
+
+  <h3>Expected Output</h3>
+  <pre>
+28.26
+16
+6
+  </pre>
+</body>
+</html>
