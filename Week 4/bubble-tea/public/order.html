@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbly Bliss Order</title>
+  </head>
+  <body>
+    <h1>Bubbly Bliss Order Form</h1>
+    <p>Please select your bubble tea and customise your order.</p>
+
+    <form action="/order/process-order" method="get">
+      <!-- Customer Information -->
+      <h3>Customer Information</h3>
+      <label for="name">Username:</label><br />
+      <input type="text" id="user" name="user" required /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+      <hr />
+
+      <!-- Bubble Tea Selection -->
+      <h3>Bubble Tea Selection</h3>
+
+      <p>Select your tea base:</p>
+      <select name="tea" required>
+        <option value="">-- Please choose --</option>
+        <option value="milk-tea">Classic Milk Tea</option>
+        <option value="green-tea">Green Tea</option>
+        <option value="oolong-tea">Oolong Tea</option>
+        <option value="matcha">Matcha Latte</option>
+      </select>
+      <br />
+
+      <p>Choose sugar level:</p>
+      <input type="radio" id="sugar0" name="sugar" value="0%" required />
+      <label for="sugar0">0%</label><br />
+
+      <input type="radio" id="sugar50" name="sugar" value="50%" />
+      <label for="sugar50">50%</label><br />
+
+      <input type="radio" id="sugar100" name="sugar" value="100%" />
+      <label for="sugar100">100%</label><br />
+
+      <p>Choose ice level:</p>
+      <input type="range" name="ice" min="0" max="100" step="25" />
+      <br />
+
+      <hr />
+      <!-- Toppings -->
+      <h3>Toppings</h3>
+      <p>Select your toppings:</p>
+      <input type="checkbox" id="pearls" name="toppings" value="pearls" />
+      <label for="pearls">Pearls</label><br />
+
+      <input type="checkbox" id="grass-jelly" name="toppings" value="grass-jelly"/>
+      <label for="grass-jelly">Grass Jelly</label><br />
+
+      <input type="checkbox" id="pudding" name="toppings" value="pudding" />
+      <label for="pudding">Pudding</label><br />
+
+      <input type="checkbox" id="cheese-foam" name="toppings" value="cheese-foam"/>
+      <label for="cheese-foam">Cheese Foam</label><br />
+      <hr />
+
+      <!-- Additional Notes -->
+      <h3>Additional Requests</h3>
+      <label for="notes">Special instructions:</label><br />
+      <textarea
+        id="notes"
+        name="notes"
+        rows="4"
+        cols="40"
+        placeholder="E.g. less ice, extra pearls..."
+      ></textarea>
+      <br><hr>
+
+      <!-- Agreement -->
+      <input type="checkbox" id="agree" name="agree" required />
+      <label for="agree">I confirm my order details are correct</label>
+
+      <br /><br />
+
+      <!-- Buttons -->
+      <button type="submit">Place Order</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

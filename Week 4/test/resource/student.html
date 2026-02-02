@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <script src="runtests.js"></script>
+</head>
+
+<body>
+
+    <button onclick="run()">Run Tests</button>
+    <div id="parta"></div>
+    <div id="partb"></div>
+    <div id="partc"></div>
+    <div id="total"></div>
+
+    <script>
+        // PART A
+        function parseRecords(records) {
+            // complete this function
+            var arr = []
+            for (let x of records){
+                let stu = x.split('|')
+                arr.push({
+                    studentId: stu[0],
+                    fullName: stu[1],
+                    programme: stu[2],
+                    score: Number(stu[3])
+                })
+            };
+            
+            return arr
+
+        }
+
+        // PART B
+        function countHighScorers(students, programme, threshold) {
+            // complete this function
+            var arr = []
+            for (let x of records){
+                let stu = x.split('|')
+                arr.push({
+                    studentId: stu[0],
+                    fullName: stu[1],
+                    programme: stu[2],
+                    score: Number(stu[3])
+                })
+            };
+
+            var count = 0;
+            for (let x of arr){
+                if (x.programme == programme && x.score >= threshold){
+                    count += 1
+                }
+            };
+            return count
+        }
+
+        // PART C
+        function programmeStats(students) {
+            // complete this function
+           var stats = {};
+    
+            for (let x of students) {
+                let z = x.programme;
+                if (!stats[z]) {
+                    stats[z] = { count: 0, total: 0 };
+                }
+                stats[z].count += 1;
+                stats[z].total += x.score;
+            }
+            
+            for (let c in stats) {
+                let avg = stats[c].total / stats[c].count;
+                stats[c].average = avg.toFixed(2);
+            }
+            
+            return stats;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
