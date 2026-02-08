@@ -6,15 +6,16 @@ const server = express();
 // START YOUR CODE HERE
 
 
+const path = require("path");
+server.use("/", express.static(path.join(__dirname, "public")))
 
+server.get("/", (req, res) => {
+  res.send("Welcome to our Cafe!");
+});
 
-
-
-
-
-
-
-
+server.get("/about", (req, res) => {
+  res.send("We serve delicious food and drinks.");
+});
 
 
 // END OF YOUR CODE HERE

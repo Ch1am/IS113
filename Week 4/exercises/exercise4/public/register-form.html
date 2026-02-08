@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form action="process-form" method="post">
+      <table>
+        <tr>
+          <td>First Name:</td>
+          <td><input type="text" name="firstName"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" name="lastName"></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <label>
+              <input type="radio" name="gender" value="F">Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="M">Male
+            </label>
+          </td>
+        </tr>
+        <tr></tr>
+      </table>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
