@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <form action="/search-form" method="post">
+      Name:
+      <!-- To retain the text entered by the user when the form reloads. -->
+      <input type="text" name="person" value="<%= person %>">
+      <button type="submit">Search Phone Book</button>
+    </form>
+
+    <!-- Display a customized message after the user submits the form. 
+    It remains hidden when the form first loads, since the message is initially empty. -->
+    <% if (message) { %>
+      <p><%= message %></p>
+    <% } %>
+  </body>
+</html>

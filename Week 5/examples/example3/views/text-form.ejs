@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <!-- If "fullName" is undefined (first page load), show the input form -->
+    <% if (fullName === undefined) { %>
+    <form action="/text-form" method="get">
+      Enter your name:
+      <input type="text" name="fullName">
+      <button type="submit">Send</button>
+    </form>
+    <% } else { %>
+    <!-- Otherwise, display a welcome message using the submitted name -->
+    <p>Hi <%= fullName %>. Welcome to IS113!</p>
+    <% } %>
+  </body>
+</html>

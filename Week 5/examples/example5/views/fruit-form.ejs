@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Select Fruits</title>
+  </head>
+  <body>
+    <h3>Select Your Fruits</h3>
+    <form action="/fruit-form" method="post">
+      <!-- Use the .forEach() method on the fruits array to iterate through 
+      each element and generate a corresponding checkbox option. -->
+      <% fruits.forEach(fruit => { %>
+      <div>
+        <input type="checkbox" name="products" value="<%= fruit %>">
+        <%= fruit %>
+      </div>
+      <% }) %>
+      <br>
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>

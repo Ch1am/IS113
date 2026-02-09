@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <% if (fullName && consent) { %>
+    <p>Hi <%= fullName %>. Welcome to IS113!</p>
+    <% } else { %>
+      <form action="/consent-form" method="get">
+        Enter your name:
+        <input type="text" name="fullName" value="<%= fullName %>" />
+        <input type="checkbox" name="consent" <%=consent ? "checked" : "" %>>
+        Agree to T&C
+        <button type="submit">Send</button>
+      </form>
+      <% if (error) { %>
+      <p><%- error %></p>
+      <% } %>
+    <% } %>
+  </body>
+</html>
