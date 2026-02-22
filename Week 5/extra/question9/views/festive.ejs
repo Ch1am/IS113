@@ -1,0 +1,39 @@
+<!-- Week 5 - Extra Question 9 Solution - views/festive.ejs -->
+<!------------------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <h1> Festive </h1>
+    
+    <form action="/process" method="post">
+
+        <!-- START YOUR CODE HERE -->
+
+        <!-- Dynamic list of festive activities -->
+        <h3>Festive Activities:</h3>
+        <% activityList.forEach(activity => { %>
+            <input type="checkbox" name="activities" value="<%= activity %>" 
+                <%= selectedActivities.includes(activity) ? 'checked' : '' %> />
+            <label><%= activity %></label><br>   
+        <% }) %>
+        
+        <h3>Filter Free Activities:</h3>
+        <input type="checkbox" name="filterFree" value="free"
+            <%= selectedFilterFree ? 'checked' : '' %> 
+            > Yes <br><br>
+
+        <button type="submit">Submit</button>
+
+        <% if (message) { %>
+            <!-- Display message if it exists -->
+            <%- message %>
+        <% } %>
+
+        <!-- END YOUR CODE HERE -->
+
+    </form>
+
+</body>
+</html>

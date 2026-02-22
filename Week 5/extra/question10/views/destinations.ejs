@@ -1,0 +1,35 @@
+<!-- Week 5 - Extra Question 10 Solution - views/destinations.ejs -->
+<!------------------------------------------------------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Destination</title>
+</head>
+<body>
+    <h1>Step 1: Choose Your Destination</h1>
+    <form action="/activities" method="POST">
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Destination</th>
+                <th>Image</th>
+            </tr>
+            <% destinations.forEach(destination => { %>
+                <tr>
+                    <td>
+                        <input type="radio" name="destination" value="<%= destination.name %>" required>
+                        <strong><%= destination.flag %> <%= destination.name %></strong>
+                    </td>
+                    <td>
+                        <img src="/images/<%= destination.image %>" alt="<%= destination.name %>" width="150">
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+        <br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

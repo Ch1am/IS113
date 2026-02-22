@@ -1,0 +1,34 @@
+<!-- Week 5 - Extra Question 10 Solution - views/activities.ejs -->
+<!---------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Activities</title>
+</head>
+<body>
+    <h1>Step 2: Select Activities for <%= destination.name %></h1>
+    <form action="/summary" method="POST">
+        <!-- hidden input for keeping track of the selected destination -->
+        <input type="hidden" name="destination" value="<%= destination.name %>">
+
+        <!-- Checkboxes for activities -->
+        <% destination.activities.forEach((activity, index) => { %>
+            <input  type="checkbox" 
+                    id="activity_<%= index %>" 
+                    name="activities" 
+                    value="<%= activity %>">
+            <label for="activity_<%= index %>"><%= activity %></label><br>
+        <% }) %>
+        
+        <p>Note: 
+            Activities are optional.<br>
+            Click "Next" to proceed to the summary page.
+        </p>
+
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

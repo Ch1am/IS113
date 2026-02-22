@@ -1,0 +1,33 @@
+<!-- Week 5 - Extra Question 2 Solution - views/temperature.ejs -->
+<!---------------------------------------------------------------->
+
+<html>
+<head>
+    <title>Celsius=Fahrenheit Temperature Conversion</title>
+<body>
+
+<form action='/process-form' method='post'>
+
+    <input type="number" name="temp" value="<%= temp %>"> degrees
+
+    <select name="conversion">
+        <option value="f" <%= conversion === 'f' ? 'selected' : ''%>> Fahrenheit </option> 
+        <option value="c" <%= conversion === 'c' ? 'selected' : ''%>> Celsius </option>
+    </select> 
+
+    <button type="submit">equals</button>
+   
+    <!-- START YOUR CODE HERE -->
+
+    <% if (message) { %> 
+        <!-- Display the message (converted temperature) if it exists -->
+        <%= message %>
+    <% } %> 
+    
+    <!-- END YOUR CODE HERE -->
+
+</form>
+
+</body>
+</html>
+

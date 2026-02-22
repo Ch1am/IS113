@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <% if (course && courseType) { %>
+        <!-- Display confirmation message if both course and courseType are provided -->
+        <h3>Registration Successful</h3>
+        <p>You have successfully registered for <%= course %> <br>as a <%= courseType %> course.</p>
+    <% } else { %>
+        <!-- Registration form displayed if course or courseType is missing -->
+        <!-- Title for the registration form -->
+        <h3>Course Registration</h3>
+
+        <!-- Form submission to "/register-course" using the POST method -->
+        <form action="/register-course" method="post">
+          <!-- Course selection drop-down -->
+          Select a Course:
+          <select name="course">
+            <!-- Default option prompting the user to select -->
+            <option value="">--Please select--</option>
+            <!-- If the course variable equals "Web Development", this option is pre-selected -->
+            <option value="Web Development" <%= course === "Web Development" ? "selected" : "" %>>Web Development</option>
+            <!-- If the course variable equals "Data Science", this option is pre-selected -->
+            <option value="Data Science" <%= course === "Data Science" ? "selected" : "" %>>Data Science</option>
+            <!-- If the course variable equals "Cybersecurity", this option is pre-selected -->
+            <option value="Cybersecurity" <%= course === "Cybersecurity" ? "selected" : "" %>>Cybersecurity</option>
+          </select>
+          <br><br>
+
+          <!-- Course Type selection with radio button -->
+          Course Type:<br>
+          <!-- If courseType equals "Full Time", this radio button is pre-checked -->
+          <input type="radio" name="courseType" value="Full Time" <%= courseType==="Full Time" ? "checked" : "" %>> Full Time<br>
+          <!-- If courseType equals "Part Time", this radio button is pre-checked -->
+          <input type="radio" name="courseType" value="Part Time" <%= courseType==="Part Time" ? "checked" : "" %>> Part Time<br>
+          <br>
+     
+          <!-- Submit button to send form data -->
+          <button type="submit">Register</button>
+        </form>
+        <% } %>
+        <!-- Display validation messages if there are any errors -->
+        <% if (errors.length > 0) { %>
+          <ul style="color: red">
+            <% errors.forEach( error => { %>
+              <li><%= error %></li><!-- Display each error in a list -->
+            <% }); %>
+          </ul>
+        <% } %>
+  </body>
+</html>

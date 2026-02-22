@@ -1,0 +1,26 @@
+<!-- Week 5 - Extra Question 7 Solution - views/prime.ejs -->
+<!---------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime Number</title>
+    </head>
+    <body>
+        <p>Please enter a whole number.</p>
+        <form action="/process" method="get"> 
+            <input type="text" name="num">
+            <button type="submit">Go!</button> 
+        </form>
+
+        <!-- START YOUR CODE HERE -->
+
+        <!-- Display message if it exists -->
+        <% if (message) { %>
+            <%- message %>
+        <% } %>
+
+        <!-- END YOUR CODE HERE -->
+    </body>
+</html>
+

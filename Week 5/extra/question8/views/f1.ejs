@@ -1,0 +1,38 @@
+<!-- Week 5 - Extra Question 8 Solution - views/f1.ejs -->
+<!------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <h1> F1 Singapore </h1>
+    
+    <form action="/process" method="post">
+
+        <!-- START YOUR CODE HERE -->
+
+        <!-- Dynamic drop down list containing the drivers names-->
+        <h3>Winner(s):</h3>
+        <select name="drivers" multiple size="5">
+            <% driversNames.forEach(driverName => { %>
+                <option value="<%= driverName %>" <%= selectedDriversNames.includes(driverName) ? 'selected' : '' %>>
+                    <%= driverName %>    
+                </option>
+            <% }) %> 
+        </select>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+        <br>
+        <!-- Display message if it exists -->
+        <% if (message) { %>
+            <%- message %>   
+        <% } %>
+
+        <!-- END YOUR CODE HERE -->
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Week 5 - Extra Question 4 Solution - views/index.ejs -->
+<!---------------------------------------------------------->
+
+<html>
+<body>  
+    <form action='/process' method='post'>
+    
+        <!-- START YOUR CODE HERE -->
+
+        <% if (message) { %>
+            <!-- Display the message if it exists -->
+            <p><%= message %></p>
+        <% } %>
+        
+        <img src='/images/<%= openOrClosed %>.jpg'>
+        <br><br>
+
+        <button type="submit">Crack open your cookie!</button>
+        
+    </form>
+
+    <a href="/">Home</a>
+
+        <!-- END YOUR CODE HERE -->
+
+</body>
+</html>

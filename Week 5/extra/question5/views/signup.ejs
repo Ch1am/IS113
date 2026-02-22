@@ -1,0 +1,48 @@
+<!-- Week 5 - Extra Question 5 Solution - views/signup.ejs -->
+<!----------------------------------------------------------->
+
+<html>
+<body>
+    <h1>Krazy Gym</h1>
+
+    <!-- START YOUR CODE HERE -->
+
+    <!-- form generated dynamically -->
+    <form action="process-form" method="post">
+        <% if (errorMessages) { %>
+            <!-- Display the message if it exists -->
+            <ul>
+                <% errorMessages.forEach(error => { %>
+                    <li><%= error %></li>
+                <% }) %>
+            </ul>
+        <% } %> 
+   
+       
+        Reasons for joining (Must select at least ONE): <br>
+        <% reasonsList.forEach(reason => { %>
+            <input type="checkbox" name="reasons" value="<%= reason %>" 
+            <%= selectedReasons.includes(reason) ? 'checked' : '' %> >
+            <%= reason %> 
+            <br>
+        <% }) %>
+        <br>
+
+        Gym Type: (Must select at least ONE): <br>
+
+        <% gymTypesList.forEach(gymType => { %>
+            <input type="radio" name="gymType" value="<%= gymType %>" 
+            <%= selectedGymType === gymType ? 'checked' : '' %> >
+            <%= gymType %>
+            <br>
+        <% }) %>
+        <br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    
+   <!-- END YOUR CODE HERE -->
+
+</body>
+</html>

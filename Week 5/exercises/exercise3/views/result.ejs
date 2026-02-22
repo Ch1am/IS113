@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <h3>Country Capital Lookup Tool - Result</h3>
+
+    <!-- Check if no country was selected -->
+    <% if (!result) { %>
+      <p>No country selected.</p>
+
+    <% } else { %>
+      <!-- If countries were selected, display the results in a table -->
+      <table border="1">
+        <tr>
+          <th>Country</th>
+          <th>Capital</th>
+        </tr>
+
+        <!-- Loop through each result entry (country and its capital) -->
+        <% result.forEach(entry => { %>
+          <tr>
+            <!-- Display country name -->
+            <td><%= entry.country %></td>
+
+            <!-- Display corresponding capital -->
+            <td><%= entry.capital %></td>
+          </tr>
+        <% }) %>
+      </table>
+    <% } %>
+  </body>
+</html>

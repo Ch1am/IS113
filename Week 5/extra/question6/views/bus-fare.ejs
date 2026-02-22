@@ -1,0 +1,58 @@
+<!-- Week 5 - Extra Question 6 Solution - views/bus-fare.ejs -->
+<!------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compute Bus Fare in Far Far Away Land</title>
+    </head>
+    <body>
+        <h2>Enter details</h2>
+  <form action="/bus-fare" method="post">
+
+            <!-- START YOUR CODE HERE -->
+
+            <!-- Distance -->
+            Distance (in km): 
+            <input type="text" name="distance" size="5" value="<%= distance %>" ><br>
+
+            <!-- Age group -->
+            Age Group:
+            <select name="ageGroup">   
+                <% ageGroups.forEach(ageGroup => { %>
+                    <option value="<%= ageGroup %>" 
+                    <%= selectedAgeGroup === ageGroup ? 'selected' : '' %> >
+                    <!-- to change children to Children etc -->
+                    <%= ageGroup %>
+                    </option>   
+                <% }) %>
+            </select>
+            <br>
+
+            <!-- Time -->
+            Time:
+            <% times.forEach(time => { %>
+                <input type="radio" name="time" value="<%= time %>" 
+                <%= selectedTime === time ? 'checked' : '' %> >
+                <%= time %>
+            <% }) %>
+             
+            <br><br>
+               
+            <!-- Submit button -->
+            <button type="submit">Compute Fare</button>
+
+            <br>
+
+            <!-- Display message if it exists -->
+            <% if (message) { %>
+                <%- message %>
+            <% } %> 
+
+            <!-- END YOUR CODE HERE -->
+
+        </form>
+    
+    </body>
+</html>
+

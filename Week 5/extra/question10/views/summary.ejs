@@ -1,0 +1,38 @@
+<!-- Week 5 - Extra Question 10 Solution - views/summary.ejs -->
+<!------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Summary</title>
+</head>
+<body>
+    <h1>Your Weekend Getaway Plan</h1>
+    
+    <h2>Destination: <%= destination.flag %> <%= destination.name %></h2>
+    <img src="/images/<%= destination.image %>" alt="<%= destination.name %>" width="150">
+
+    <h3>Activities:</h3>
+    <% if (!selectedActivities || (Array.isArray(selectedActivities) && selectedActivities.length === 0)) { %>
+        <p>No activity selected.</p>
+    <% } else { %>
+        <ul>
+            <% if (Array.isArray(selectedActivities)) { %>
+                <% selectedActivities.forEach(activity => { %>
+                    <li><%= activity %></li>
+                <% }) %>
+            <% } else { %>
+                <li><%= selectedActivities %></li>
+            <% } %>
+        </ul>
+    <% } %>
+
+    <h2>Enjoy your trip in <%= destination.name %>! 🎉</h2>
+
+    <a href="/welcome.html">
+        <button type="button">Plan Another Trip</button>
+    </a>
+</body>
+</html>

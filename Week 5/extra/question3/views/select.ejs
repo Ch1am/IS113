@@ -1,0 +1,32 @@
+<!-- Week 5 - Extra Question 3 Solution - views/select.ejs -->
+<!----------------------------------------------------------->
+
+<html>
+<body>
+
+    <form action='/process-form' method='post'>
+    
+        <!-- START YOUR CODE HERE -->
+
+        School:
+        <select name="schoolName">
+            <% schoolNames.forEach(schoolName => { %>
+                <option value="<%= schoolName %>" <%= schoolName === selectedSchoolName ? 'selected' : '' %> >
+                    <%= schoolName %>
+                </option>
+            <% }) %>
+        </select>
+
+        <button type="submit">Select</button>
+    
+    </form>
+
+    <% if (message) { %>
+        <!-- Display the message if it exists -->
+        <h1><%= message %></h1>
+    <% } %> 
+            
+        <!-- END YOUR CODE HERE -->
+
+</body>
+</html>

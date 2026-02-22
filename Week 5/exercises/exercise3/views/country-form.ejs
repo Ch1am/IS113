@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <h3>Country Capital Lookup Tool</h3>
+
+    <!-- Form to submit selected countries to the server -->
+    <form action="/country-form" method="post">
+
+      <!-- Label for the checkbox group -->
+      Select:<br/>
+
+      <!-- Loop through each country in the countries array -->
+      <% countries.forEach((country, index) => { %>
+
+        <!-- Render a checkbox input for each country -->
+        <input type="checkbox" name="countries" value="<%= country %>"><%= country %>
+
+        <!-- Insert a line break after every 5 checkboxes -->
+        <% if (index % 5 === 4) { %>
+          <br>
+        <% } %>
+      <% }) %>
+      <br>
+
+      <!-- Submit button to send selected countries -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

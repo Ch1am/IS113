@@ -1,0 +1,28 @@
+<!-- Week 5 - Extra Question 1 Solution - views/like.ejs -->
+<!--------------------------------------------------------->
+
+<html>
+<body>
+    <form action="/process-like" method="get">
+        <p>
+            People say that nothing is impossible but I do nothing all the time
+        </p>
+
+        <button type="submit" name="feeling" value="Like">Like</button>
+        <button type="submit" name="feeling" value="Haha">Haha</button>
+        <input type='checkbox' name='bookmark' <%= bookmarked ? 'checked' : '' %> > Bookmark
+    
+    </form>
+
+    <!-- START YOUR CODE HERE -->
+    <% 
+        if (message) { %>
+            <!-- Display the message if it exists -->
+            <p><%= message %></p>   
+        <% } 
+    %>
+    <!-- END YOUR CODE HERE -->
+
+</body>
+</html>
+
