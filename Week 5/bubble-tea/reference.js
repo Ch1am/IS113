@@ -24,6 +24,12 @@ const f = function(req, res) {
 }
 server.get('/', f)
 
+server.post('/process-form', (req, res) => {
+    let userName = req.body.fullName
+
+    res.send(`Hello ${userName}`)
+})
+
 
 server.use(express.urlencoded( { extended : true} ) )
 
