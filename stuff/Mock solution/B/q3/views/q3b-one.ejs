@@ -1,0 +1,52 @@
+<!--
+  Name:  
+  Email: 
+-->
+
+<!-- views/q3b-one.ejs (SOLUTION) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Q3B One Page</title>
+</head>
+
+<body>
+
+  <% if (count===0) { %>
+    <h1>Please select a transport option</h1>
+    <% } else { %>
+      <h1>
+        You selected <%= count %> transport option<%= count===1 ? "" : "s" %>
+      </h1>
+      <% } %>
+
+        <form method="POST" action="/q3b-one">
+          <% transports.forEach(t=> { %>
+            <label>
+              <input type="checkbox" name="transport" value="<%= t.id %>" <%=selectedIds.includes(t.id) ? "checked" : ""
+                %> />
+              <%= t.label %>
+            </label>
+            <br />
+            <% }); %>
+              <br />
+              <button type="submit">Submit</button>
+        </form>
+
+        <% if (count> 0) { %>
+          <table border="1">
+            <tr>
+              <% selectedTransports.forEach(t=> { %>
+                <td>
+                  <img src="/img/<%= t.img %>" alt="<%= t.label %>" />
+                </td>
+                <% }); %>
+            </tr>
+          </table>
+          <% } %>
+
+</body>
+
+</html>
