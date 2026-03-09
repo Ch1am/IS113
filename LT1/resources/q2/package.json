@@ -1,0 +1,14 @@
+{
+  "name": "lt-q2",
+  "version": "1.0.0",
+  "description": "LT Q2 - Email Generator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "nodemon": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.14"
+  }
+}
