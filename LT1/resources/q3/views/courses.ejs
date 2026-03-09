@@ -1,0 +1,44 @@
+<!-- 
+  Name: Marcus Chiam Hao Yi
+  Email: marcuschiam.2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Courses</title>
+</head>
+<body>
+    <h1>Step 1: Select Courses to Register</h1>
+   
+    <form action="/register" method="GET">
+         
+        <table border="1">
+            <thead>
+                <tr><th>Course Code</th><th>Title</th><th>Select?</th></tr>
+            </thead>
+            <tbody>
+                <!-- Add/Modify Code Here -->
+                <% if (courses && courses.length > 0) { %>
+                        <% courses.forEach( course => { %>
+                            <tr>
+                                <td><%= course.courseCode %></td>
+                                <td><%= course.title %></td>
+                                <td> 
+                                    <label><input type="checkbox" name="course" value="<%= course.courseCode%>" /></label>
+                                </td>
+                            </tr>
+                    <% }) %>
+                <% } %>
+                
+            </tbody>
+        </table>
+            
+        <br/>
+        <button type="submit">Next</button>
+        <br/>
+    </form>
+
+</body>
+</html>

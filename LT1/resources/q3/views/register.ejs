@@ -1,0 +1,204 @@
+<!-- 
+  Name: Marcus Chiam Hao Yi
+  Email: marcuschiam.2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Slots</title>
+</head>
+<body>
+    <!-- Add/Modify Code Here -->
+     
+    <h1>Step 2: Select Date/Time Slots for Your Selected Courses </h1>
+    <% 
+        // Hint: use these arrays to create the table
+        const times = ["08:15am", "12:00pm", "15:30pm"]
+        const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] 
+       
+    %>
+
+    <form action="/summary" method="GET">
+        
+        <!-- hint: use hidden input for keeping track of the selected course codes -->
+        <input type="hidden" name="" value="">
+        <h1><% selected.forEach(t=> { %>
+            <%= t.courseCode %>,
+            <% }); %></h1>
+        <table border="1">
+            <thead>
+                <tr>  
+                    <th>Date/Time</th>
+                    <th><%= times[0] %></th>
+                    <th><%= times[1] %></th>
+                    <th><%= times[2] %></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Monday -->
+                <tr>
+                    <td><%= days[0] %></td>
+                    <td>
+
+                        <% selected.forEach(t=> { %>
+                            <% if (t.slots.Monday && t.slots.Monday.length > 0) { %>
+                                <% t.slots.Monday.forEach(x=> { %>
+                                    <% if (x == times[0]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}0slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %>
+                    </td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Monday && t.slots.Monday.length > 0) { %>
+                                <% t.slots.Monday.forEach(x=> { %>
+                                    <% if (x == times[1]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}0slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Monday && t.slots.Monday.length > 0) { %>
+                                <% t.slots.Monday.forEach(x=> { %>
+                                    <% if (x == times[2]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}0slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                </tr>
+
+                <!-- Tuesday -->
+                <tr>
+                    <td><%= days[1] %></td>
+                    <td>
+                    <% selected.forEach(t=> { %>
+                            <% if (t.slots.Tuesday && t.slots.Tuesday.length > 0) { %>
+                                <% t.slots.Tuesday.forEach(x=> { %>
+                                    <% if (x == times[0]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}1slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %>
+                    </td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Tuesday && t.slots.Tuesday.length > 0) { %>
+                                <% t.slots.Tuesday.forEach(x=> { %>
+                                    <% if (x == times[1]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}1slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Tuesday && t.slots.Tuesday.length > 0) { %>
+                                <% t.slots.Tuesday.forEach(x=> { %>
+                                    <% if (x == times[2]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}1slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                </tr>
+
+                <!-- Wednesday -->
+                <tr>
+                    <td><%= days[2] %></td>
+                    <td>
+                    <% selected.forEach(t=> { %>
+                            <% if (t.slots.Wednesday && t.slots.Wednesday.length > 0) { %>
+                                <% t.slots.Wednesday.forEach(x=> { %>
+                                    <% if (x == times[0]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}2slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %>
+                    </td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Wednesday && t.slots.Wednesday.length > 0) { %>
+                                <% t.slots.Wednesday.forEach(x=> { %>
+                                    <% if (x == times[1]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}2slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Wednesday && t.slots.Wednesday.length > 0) { %>
+                                <% t.slots.Wednesday.forEach(x=> { %>
+                                    <% if (x == times[2]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}2slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                </tr>
+
+                <!-- Thursday -->
+                <tr>
+                    <td><%= days[3] %></td>
+                    <td>
+                    <% selected.forEach(t=> { %>
+                            <% if (t.slots.Thursday && t.slots.Thursday.length > 0) { %>
+                                <% t.slots.Thursday.forEach(x=> { %>
+                                    <% if (x == times[0]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}3slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %>
+                    </td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Thursday && t.slots.Thursday.length > 0) { %>
+                                <% t.slots.Thursday.forEach(x=> { %>
+                                    <% if (x == times[1]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}3slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Thursday && t.slots.Thursday.length > 0) { %>
+                                <% t.slots.Thursday.forEach(x=> { %>
+                                    <% if (x == times[2]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}3slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                </tr>
+
+                <!-- Friday -->
+                <tr>
+                    <td><%= days[4] %></td>
+                    <td>
+                    <% selected.forEach(t=> { %>
+                            <% if (t.slots.Friday && t.slots.Friday.length > 0) { %>
+                                <% t.slots.Friday.forEach(x=> { %>
+                                    <% if (x == times[0]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}4slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %>
+                    </td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Friday && t.slots.Friday.length > 0) { %>
+                                <% t.slots.Friday.forEach(x=> { %>
+                                    <% if (x == times[1]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}4slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                    <td><% selected.forEach(t=> { %>
+                            <% if (t.slots.Friday && t.slots.Friday.length > 0) { %>
+                                <% t.slots.Friday.forEach(x=> { %>
+                                    <% if (x == times[2]) { %>
+                                    <label><input type="radio" name=`${<%= t.courseCode %>}4slots` value="<%= x%>" /><%= t.courseCode %></label><br>
+                                <%}%><% }); %>
+                            <%}%>
+                        <% }); %></td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <br/>
+        <button type="submit">Next</button>
+        <br/>
+    </form>
+</body>
+</html>
