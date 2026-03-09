@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Filter Category</title>
+  </head>
+  <body>
+    <h3>Select a Category to View</h3>
+    <form action="/display-data" method="post">
+      Pick a category:
+      <select name="category">
+        <option value="fruits" <%= selectedCategory === "fruits" ? "selected" : "" %>>Fruits</option>
+        <option value="vegetables" <%= selectedCategory === "vegetables" ? "selected" : "" %>>Vegetables</option>
+      </select>
+      <button type="submit">Filter</button>
+    </form>
+
+    <% if (filteredItems && Object.keys(filteredItems).length > 0) { %>
+      <h3>Items in "<%= selectedCategory %>" category:</h3>
+      <table border="1">
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+        </tr>
+        <% for (const key in filteredItems) { %>
+          <tr>
+            <td><%= key %></td>
+            <td><%= filteredItems[key] %></td>
+          </tr>
+        <% } %>
+      </table>
+    <% } else if (selectedCategory) { %>
+      <p>No items found in "<%= selectedCategory %>" category.</p>
+    <% } %>
+  </body>
+</html>

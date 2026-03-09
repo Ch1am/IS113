@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Submit Info</title>
+</head>
+<body>
+  <% if (!name) { %>
+    <h3>Submit Your Info</h3>
+    <form action="/write-data" method="post">
+      Name: <input type="text" name="name"><br>
+      Age: <input type="number" name="age"><br><br>
+      <button type="submit">Send</button>
+    </form>
+  <% } else { %>
+    <p>Thank you, <%= name %>. Your data has been saved.</p>
+    <a href="/write-data">Back</a>
+  <% } %>
+</body>
+</html>

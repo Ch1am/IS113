@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Advice Search</title>
+</head>
+<body>
+  <h3>Search for Advice</h3>
+
+  <form action="/advice-search" method="post">
+    Enter a keyword:
+    <input type="text" name="keyword" value="<%= query %>">
+    <button type="submit">Search</button>
+  </form>
+
+  <% if (error) { %>
+    <%= error %></p>
+  <% } %>
+
+  <% if (advice) { %>
+    <h4>Advice related to "<%= query %>":</h4>
+    <ul>
+      <% advice.forEach((item) => { %>
+        <li><%= item.advice %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+</body>
+</html>
