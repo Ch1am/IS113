@@ -1,0 +1,56 @@
+<!--
+Name:  
+Email: 
+-->
+
+<html>
+<head>
+    <title>Q3-B</title>
+</head>
+<body>
+    <!-- ADD YOUR CODE BELOW -->
+
+    <!-- Check if there is a message to display -->
+    <% if(msg !== "") { %>
+        <!-- Display the message inside an <h1> tag -->
+        <h1><%= msg %></h1>
+    <% } %>
+
+    <!-- Check if the fruitsToDisplay array exists and has elements -->
+    <% if (fruitsToDisplay && fruitsToDisplay.length > 0) { %>
+
+         <!-- Display selected fruits as images inside a table with border -->
+        <table border="1">
+
+        <!-- Loop through each fruit in the array -->
+        <% fruitsToDisplay.forEach( fruit => { %>
+            <tr>
+                <!-- Dynamically construct image source path for each fruit -->
+                <td><img src="img/<%= fruit %>.png" ></td>
+            </tr>
+        <% }) %>
+        </table>
+    <% } %>
+
+    <!-- Form submits selected fruits to /q3b-one using POST method -->
+    <form action="/q3b-one" method="post">
+
+        <!-- Loop through fruitOptions array to generate checkbox inputs dynamically -->
+        <% fruitOptions.forEach(fruit => { %>
+            <label>
+                <!-- Checkbox input with name "fruits" and value set to current fruit -->
+                <input type="checkbox" name="fruits" value="<%= fruit %>">
+                <!-- Display the fruit name next to the checkbox -->   
+                <%= fruit %>
+            </label>
+        <% }); %>
+        <br>
+
+        <!-- Submit button to send the form -->
+        <button type="submit">Submit</button> 
+    </form>
+   
+    <!-- END OF ADDING YOUR CODE -->
+</body>
+
+</html>

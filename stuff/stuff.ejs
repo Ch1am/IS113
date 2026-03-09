@@ -1,0 +1,112 @@
+<% if (selections.length === 0) { %>
+  <h1>Please select a transport option</h1>
+<% } else { %>
+  <h1>Selections</h1>
+  <table border="1">
+    <% selections.forEach(s => { %>
+      <tr><td><img src="/img/<%= s %>.png" width="100"></td></tr>
+    <% }); %>
+  </table>
+<% } %>
+
+<h1><%= count ? `You selected ${count} ${count > 1 ? 'options' : 'option'}` : 'Please select a transport option' %></h1>
+<% if (selections.length) { %>
+  <table border="1">
+    <% selections.forEach(s => { %>
+      <tr><td><img src="/img/<%= s %>.png"></td></tr>
+    <% }); %>
+  </table>
+<% } %>
+<form method="POST">
+  <% options.forEach(opt => { %>
+    <label><input type="checkbox" name="transports" value="<%= opt.id %>" <%= selections.includes(opt.id) ? 'checked' : '' %>> <%= opt.label %></label><br>
+  <% }); %>
+  <button>Submit</button>
+</form>
+
+<!-- Core Syntax -->
+<%= %>     Outputs escaped value (e.g., <%= user %> → "John")
+<%- %>     Outputs unescaped (HTML/raw, e.g., <%- html %> → <b>bold</b>)
+<% %>      JS control (loops/if/no output)
+<%# %>     Comment (invisible)
+<%_ %>     Trim whitespace before
+<%_ %>     Trim after (use for clean HTML)
+
+<!-- Conditionals (No Selection/Count Messages) -->
+<% if (selections.length === 0) { %>
+  <h1>Please select an option</h1>
+<% } else { %>
+  <h1>You selected <%= selections.length %> option<%= selections.length > 1 ? 's' : '' %></h1>
+<% } %>
+
+<!-- Loops (Images/Tables from Arrays) -->
+<!-- Array of strings: ['bus', 'train'] -->
+<table border="1">
+  <% selections.forEach(s => { %>
+    <tr><td><img src="/img/<%= s %>.png" width="100" alt="<%= s %>"></td></tr>
+  <% }); %>
+</table>
+
+<!-- Array of objects: [{id:'bus', label:'Bus', img:'bus.png'}] -->
+<% options.forEach(opt => { %>
+  <tr>
+    <td><%= opt.label %></td>
+    <td><img src="<%= opt.img %>"></td>
+  </tr>
+<% }); %>
+
+<!-- Dynamic Forms (Checkboxes from Data) -->
+<form method="POST" action="">
+  <% options.forEach(opt => { %>
+    <label>
+      <input type="checkbox" 
+             name="selections" 
+             value="<%= opt.id %>" 
+             <%= selections.includes(opt.id) ? 'checked' : '' %>>
+      <%= opt.label %>
+    </label><br>
+  <% }); %>
+  <button type="submit">Submit</button>
+</form>
+
+
+<!-- Full Q3B-Style Single Page -->
+ <!DOCTYPE html>
+<html>
+<body>
+  <% 
+    const msg = count ? `You selected ${count} ${count > 1 ? 'fruits' : 'fruit'}` : 'Please select a fruit';
+  %>
+  <h1><%= msg %></h1>
+  
+  <% if (selections.length > 0) { %>
+    <table border="1">
+      <% selections.forEach(id => { %>
+        <tr><td><img src="/img/<%= id %>.png"></td></tr>
+      <% }); %>
+    </table>
+  <% } %>
+  
+  <form method="POST">
+    <% fruitOptions.forEach(opt => { %>
+      <label>
+        <input type="checkbox" name="fruits" value="<%= opt.id %>" <%= selections.includes(opt.id) ? 'checked' : '' %>>
+        <%= opt.label %>
+      </label><br>
+    <% }); %>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
+
+<!-- Route Integration Example -->
+ // In server.js
+const fruitOptions = [
+  {id: 'apple', label: 'Apple', img: 'apple.png'},
+  // ...
+];
+app.get('/fruits', (req, res) => res.render('fruits', { fruitOptions, selections: [], count: 0 }));
+app.post('/fruits', (req, res) => {
+  const selections = req.body.fruits || [];
+  res.render('fruits', { fruitOptions, selections, count: selections.length });
+});
