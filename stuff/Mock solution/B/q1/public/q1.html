@@ -1,0 +1,70 @@
+<!--
+    Name:  
+    Email: 
+-->
+    
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Library</title>
+</head>
+
+<body>
+  <h1>Welcome to City Library</h1>
+
+  <p>
+    <a href="home/lib.html">Visit the City Library website</a>
+  </p>
+
+  <h2>Available Books</h2>
+
+  <table border="1">
+    <tr>
+      <th>Section</th>
+      <th>Title</th>
+      <th>Availability</th>
+    </tr>
+
+    <!-- Fiction (with extra line breaks for spacing) -->
+    <tr>
+      <td>Fiction<br /><br /></td>
+      <td>The Great Adventure<br /><br /></td>
+      <td>Yes<br /><br /></td>
+    </tr>
+
+    <!-- Non-Fiction (two titles under same section using rowspan) -->
+    <tr>
+      <td rowspan="2">Non-Fiction</td>
+      <td>World History</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Science Explained</td>
+      <td>No</td>
+    </tr>
+
+    <!-- Magazines (colspan across Title + Availability, with extra line breaks) -->
+    <tr>
+      <td>Magazines<br /><br /></td>
+      <td colspan="2">
+        Monthly Magazine Collection - In Library Only<br /><br />
+      </td>
+    </tr>
+
+    <!-- New Arrivals (unordered list in Title column) -->
+    <tr>
+      <td>New Arrivals</td>
+      <td>
+        <ul>
+          <li>Modern Web Design</li>
+          <li>Learning JavaScript</li>
+          <li>Data Science Basics</li>
+        </ul>
+      </td>
+      <td>Yes</td>
+    </tr>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!--
+  Name:  
+  Email: 
+-->
+
+<!-- views/q3a-display.ejs (SOLUTION) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Q3A Display</title>
+</head>
+
+<body>
+  <% if (!selected || selected.length===0) { %>
+    <h1>Please select a transport option</h1>
+    <% } else { %>
+      <table border="1">
+        <tr>
+          <% selected.forEach(t=> { %>
+            <td><img src="/img/<%= t.img %>" alt="<%= t.label %>" /></td>
+            <% }); %>
+        </tr>
+      </table>
+      <% } %>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!--
+Name:  
+Email: 
+-->
+
+<html>
+<head>
+    <title>Q3-A</title>
+</head>
+<body>
+    <!-- ADD YOUR CODE BELOW -->
+ 
+    <!-- Check if there is a message to display -->
+    <% if(msg !== "") { %>
+        <!-- Display the message inside an <h1> tag -->
+        <h1><%= msg %></h1>
+    <% } %>
+
+    <!-- Check if the fruitsToDisplay array exists and has elements -->
+    <% if (fruitsToDisplay && fruitsToDisplay.length > 0) { %>
+
+        <!-- Display selected fruits as images inside a table with border -->
+        <table border="1">
+
+        <!-- Loop through each fruit in the array -->
+        <% fruitsToDisplay.forEach( fruit => { %>
+            <tr>
+                <!-- Dynamically construct image source path for each fruit -->
+                <td><img src="img/<%= fruit %>.png" ></td>
+            </tr>
+        <% }) %>
+        </table>
+    <% } %>
+<!-- END OF ADDING YOUR CODE -->
+</body>
+</html>
