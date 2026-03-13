@@ -1,0 +1,26 @@
+[
+{
+    "title": "Beginning Node.js, Express & MongoDB Development",
+    "isbn": "1078379556",
+    "rating": 4.3,
+    "price": 9.06
+},
+{
+    "title": "Node.js for Beginners: A comprehensive guide to building efficient, full-featured web applications with Node.js ",
+    "isbn": "1803238142",
+    "rating": 4.4,
+    "price": 44.99
+},
+{
+    "title": "Get Programming with Node.js",
+    "isbn": "1617294748",
+    "rating": 4.4,
+    "price": 49.99
+},
+{
+    "title": "Beginning MERN Stack: Build and Deploy a Full Stack MongoDB, Express, React, Node.js App",
+    "isbn": "852362550X",
+    "rating": 4.3,
+    "price": 16.99
+}
+]
