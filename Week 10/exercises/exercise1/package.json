@@ -1,0 +1,19 @@
+{
+  "name": "example2",
+  "version": "1.0.0",
+  "description": "CRUD using mongoose for display",
+  "license": "ISC",
+  "author": "Coen",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0",
+    "nodemon": "^3.1.14"
+  }
+}
