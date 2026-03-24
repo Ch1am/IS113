@@ -1,0 +1,80 @@
+[
+{
+  "sku": 101,
+  "fooddesc": "Fish and Chips",
+  "category": "Main",
+  "price": 15.80
+
+},
+{
+  "sku": 102,
+  "fooddesc": "Beef Steak",
+  "category": "Main",
+  "price": 20.90
+
+},
+{
+  "sku": 103,
+  "fooddesc": "Pasta Marinara",
+  "category": "Main",
+  "price": 16.60
+
+},
+{
+  "sku": 104,
+  "fooddesc": "Margherita Pizza",
+  "category": "Main",
+  "price": 10.70
+
+},
+{
+  "sku": 201,
+  "fooddesc": "Truffle Fries",
+  "category": "Side",
+  "price": 9.00
+
+},
+
+{
+  "sku": 202,
+  "fooddesc": "Potato Salad",
+  "category": "Side",
+  "price": 7.00
+
+},
+{
+  "sku": 203,
+  "fooddesc": "Pickle Radish",
+  "category": "Side",
+  "price": 3.00
+
+},
+{
+  "sku": 401,
+  "fooddesc": "Orange Juice",
+  "category": "Beverage",
+  "price": 4.00
+
+},
+{
+  "sku": 402,
+  "fooddesc": "Apple Juice",
+  "category": "Beverage",
+  "price": 4.00
+
+},
+{
+  "sku": 403,
+  "fooddesc": "Soft Drinks",
+  "category": "Beverage",
+  "price": 2.00
+
+},
+{
+  "sku": 403,
+  "fooddesc": "Chinese Tea",
+  "category": "Beverage",
+  "price": 1.00
+
+}
+]

@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>My Blog</title> 
+</head>
+<body>
+  <h3>My Blog</h3>
+
+  <!-- Blog post submission form -->
+  <form action="/blog-posts" method="post">
+    
+    <!-- Input for the blog title -->
+    <label>Title:</label><br>
+    <input type="text" name="title"><br><br>
+
+    <!-- Input for the blog content -->
+    <label>Content:</label><br>
+    <textarea name="content" rows="5" cols="40"></textarea><br><br>
+
+    <!-- Submit button to post the blog -->
+    <button type="submit">Post</button>
+  </form>
+
+  <h3>All Posts</h3>
+
+  <!-- EJS conditional block: Check if there are any blog posts -->
+  <% if (posts.length === 0) { %>
+    <!-- Message when no posts are available -->
+    <p>No posts yet.</p> 
+  <% } else { %>
+    <!-- EJS loop to render each blog post -->
+    <% posts.forEach(post => { %>
+        <!-- Display the post title -->
+        <h3><%= post.title %></h3>    
+        <!-- Display the post content -->  
+        <p><%= post.content %></p>      
+        --------------------------------------------------------<br>
+    <% }); %>
+  <% } %>
+</body>
+</html>

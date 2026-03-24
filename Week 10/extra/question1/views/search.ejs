@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Search Books</title>
+</head>
+<body>
+    <form action="/search" method="POST">
+    Gender: <input type="radio" name="gender" value="M">Male
+    <input type="radio" name="gender" value="F">Female
+    <input type="radio" name="gender" value="any">Any <br>
+    Min Age:&nbsp;&nbsp;<input type="text" name="min"><br>
+    Max Age:&nbsp;<input type="text" name="max"><br>
+    <button type="submit">Filter</button>
+    </form>
+    
+    <br><br>
+    <% if (typeof results !== 'undefined') { %>
+    <h3>Results:</h3>
+    <% if (results.length > 0) { %>
+        <table border="1">
+            <tr><th>ID</th><th>Name</th><th>Gender</th><th>Age</th></tr>
+            <% results.forEach(person => { %>
+                <tr>
+                    <td><%= person.id %></td>
+                    <td><%= person.name %></td>
+                    <td><%= person.gender %></td>
+                    <td><%= person.age %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } else { %>
+        <p>No persons found.</p>
+    <% } %>
+<% } %>
+</body>
+</html>

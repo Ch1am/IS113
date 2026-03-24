@@ -1,0 +1,31 @@
+[
+{
+    "id": 1,
+    "name": "Jennie",
+    "gender": "F",
+    "photo":"jennie813.jpg",
+    "headline" :"She is NOT related to Kim Jong Un."
+},
+{
+    "id": 2,
+    "name": "Seolhyun",
+    "gender": "F",
+    "photo":"seolhyun482.jpg",
+    "headline" :"Her nose is natural."
+},
+{
+    "id": 3,
+    "name": "Seungri",
+    "gender": "M",
+    "photo":"seungri194.jpg",
+    "headline" :"His name is all over the news now!"
+},
+{
+    "id": 4,
+    "name": "Taeyang",
+    "gender": "M",
+    "photo":"taeyang503.jpg",
+    "headline" :"He is still married."
+}
+
+]

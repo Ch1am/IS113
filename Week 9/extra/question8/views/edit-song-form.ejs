@@ -1,0 +1,53 @@
+<!-- Week 9 - Extra Exercises Solutions - Question 8 - edit-song-form.ejs -->
+<!-- ----------------------------------------------------------------------->
+
+<%- include("common/header") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit a Song</title>
+</head>
+<body>
+  <h3>Edit a Song</h3>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p style="color: green;"><%= success %></p>
+  <% } %>
+
+  <% if (step === "search") { %>
+    <!-- Step 1: Ask for artist & title -->
+    <form action="/edit-song" method="post">
+      <label for="artist">Artist:</label><br>
+      <input type="text" id="artist" name="artist" value="<%= songData.artist %>"><br><br>
+
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" value="<%= songData.title %>"><br><br>
+
+      <button type="submit">Load Song</button>
+    </form>
+
+  <% } else if (step === "edit") { %>
+    <!-- Step 2: Edit song details -->
+    <form action="/update-song" method="post">
+      <label for="artist">Artist:</label><br>
+      <input type="text" id="artist" name="artist" value="<%= songData.artist %>" readonly="readonly"><br><br>
+
+      <!-- Hidden field to keep original title -->
+      <input type="hidden" name="originalTitle" value="<%= songData.title %>">
+
+      <label for="newTitle">Title:</label><br>
+      <input type="text" id="newTitle" name="newTitle" value="<%= songData.title %>"><br><br>
+
+      <label for="newLyrics">Lyrics:</label><br>
+      <textarea id="newLyrics" name="newLyrics" rows="2" cols="50"><%= songData.lyrics %></textarea><br><br>
+      <button type="submit">Update Song</button>
+    </form>
+  <% } %>
+</body>
+</html>

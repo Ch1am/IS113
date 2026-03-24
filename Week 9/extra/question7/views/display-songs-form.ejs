@@ -1,0 +1,35 @@
+<!-- Week 9 - Extra Exercises Solutions - Question 7 - display-songs-form.ejs -->
+<!-- --------------------------------------------------------------------------->
+
+<%- include("common/header") %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Songs</title>
+</head>
+<body>
+  <h1>🎵 Welcome to the Songs Library 🎵</h1>
+  <img src="/images/music-notes.png" alt="Music Notes" style="width:150px; ">
+  
+  <h3>Below is our complete song collection: </h3>
+
+  <table border="1">
+    <tr>
+      <th>Artist</th>
+      <th>Title</th>
+      <th>Lyrics</th>
+    </tr>
+    <% songs.forEach(song => { %>
+      <tr>
+        <td><%= song.artist %></td>
+        <td><%= song.title %></td>
+        <td><%= song.lyrics %></td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+</html>
+    
+</body>
+</html>

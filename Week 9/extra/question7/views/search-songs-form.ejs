@@ -1,0 +1,46 @@
+<!-- Week 9 - Extra Exercises Solutions - Question 7 - search-songs-form.ejs -->
+<!-- -------------------------------------------------------------------------->
+
+<%- include("common/header") %>
+
+<!DOCTYPE html>
+<head>
+    <title>Lyrics Search</title>
+</head>
+<body>
+    <h3>Search for Lyrics</h3>
+
+    <form action="/search-songs" method="post">
+        Select an Artist:
+        <select name="artist" id="artist">
+            <option value="">--Select an Artist--</option>
+            <% artists.forEach(artist => { %>
+                <option value="<%= artist %>" <%= selectedArtist === artist ? "selected" : "" %>><%= artist %></option>
+            <% }); %>
+        </select>
+        <br><br>
+        <button type="submit">Search</button>
+    </form>
+
+    <% if (error) { %>            
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+
+    <% if (songs) { %>
+        <h4>Songs by "<%= selectedArtist %>":</h4>
+        <table border="1">
+            <tr>
+                <th>Title</th>
+                <th>Lyrics</th>
+            </tr>
+            <% songs.forEach(song => { %>
+                <tr>
+                    <td><%= song.title %></td>
+                    <td><%= song.lyrics %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } %>
+    
+</body>
+</html>

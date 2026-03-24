@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Advice Table</title>
+  </head>
+  <body>
+    <!-- Page heading -->
+    <h3>Random Advice Table (5 Requests)</h3> 
+
+    <!-- Start of table with border -->
+    <table border="1">
+      <tr>
+        <th>No.</th>     
+        <th>Advice</th>  
+      </tr>
+
+      <!-- Loop through the 'results' array using EJS templating -->
+      <% results.forEach((entry, index) => { %>
+        <tr>
+          <!-- Display the index + 1 for serial numbering (starting from 1 instead of 0) -->
+          <td><%= index + 1 %></td>
+
+          <!-- Display the advice text from each entry object -->
+          <td><%= entry.advice %></td>
+        </tr>
+      <% }); %>
+    </table> <!-- End of table -->
+  </body>
+</html>

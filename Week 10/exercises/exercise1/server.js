@@ -39,7 +39,7 @@ async function connectDB() {
 
 function startServer() {
   const hostname = "localhost"; // Define server hostname
-  const port = 8000;// Define port number
+  const port = 8001;// Define port number
  
   // Start the server and listen on the specified hostname and port
   server.listen(port, hostname, () => {

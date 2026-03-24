@@ -1,0 +1,33 @@
+<!-- Week 9 - Extra Exercises Solutions - Question 8 - delete-song-form.ejs -->
+<!-- ------------------------------------------------------------------------->
+
+<%- include("common/header") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delete a Song</title>
+</head>
+<body>
+  <h3>Delete a Song</h3>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p style="color: green;"><%= success %></p>
+  <% } %>
+
+  <form action="/delete-song" method="post">
+    <label for="artist">Artist:</label><br>
+    <input type="text" id="artist" name="artist" value="<%= formData.artist %>"><br><br>
+
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="<%= formData.title %>"><br><br>
+
+    <button type="submit">Delete Song</button>
+  </form>
+</body>
+</html>

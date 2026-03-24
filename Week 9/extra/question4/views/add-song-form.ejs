@@ -1,0 +1,34 @@
+<!-- Week 9 - Extra Exercises Solutions - Question 4 - add-song-form.ejs -->
+<!-- ---------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a New Song</title>
+</head>
+<body>
+  <h3>Add a New Song</h3>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <% if (success) { %>
+    <p style="color: green;"><%= success %></p>
+  <% } %>
+
+  <form action="/add-song" method="post">
+    <label for="artist">Artist:</label><br>
+    <input type="text" id="artist" name="artist" value="<%= songData.artist %>"><br><br>
+
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="<%= songData.title %>"><br><br>
+
+    <label for="lyrics">Lyrics:</label><br>
+    <textarea id="lyrics" name="lyrics" rows="2" cols="50"><%= songData.lyrics %></textarea><br><br>
+
+    <button type="submit">Add Song</button>
+  </form>
+</body>
+</html>

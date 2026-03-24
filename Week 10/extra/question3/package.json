@@ -1,0 +1,19 @@
+{
+  "name": "employment_stats",
+  "version": "1.0.0",
+  "description": "xtra exercises",
+  "license": "ISC",
+  "author": "Coen",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mongoose": "^8.21.0",
+    "nodemon": "^3.1.11"
+  }
+}

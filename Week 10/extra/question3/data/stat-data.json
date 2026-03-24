@@ -1,0 +1,904 @@
+[
+{
+  "id": 1,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",
+  "degree": "Accountancy and Business",
+  "employment_rate": "97.4",
+  "salary": "3701"
+},
+{
+  "id": 2,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Accountancy (3-yr direct Honours Programme)",      
+  "employment_rate": "97.1",
+  "salary": "2850"
+},
+{
+  "id": 3,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Business (3-yr direct Honours Programme)",
+  "employment_rate": "90.9",
+  "salary": "3053"
+},
+{
+  "id": 4,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Business and Computing",
+  "employment_rate": "87.5",
+  "salary": "3557"
+},
+{
+  "id": 5,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Aerospace Engineering",
+  "employment_rate": "95.3",
+  "salary": "3494"
+},
+{
+  "id": 6,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Bioengineering",
+  "employment_rate": "81.3",
+  "salary": "2952"
+},
+{
+  "id": 7,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Chemical and Biomolecular Engineering",
+  "employment_rate": "87.3",
+  "salary": "3235"
+},
+{
+  "id": 8,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Computer Engineering",
+  "employment_rate": "90.3",
+  "salary": "3326"
+},
+{
+  "id": 9,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Civil Engineering",
+  "employment_rate": "94.8",
+  "salary": "3091"
+},
+{
+  "id": 10,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Computer Science",
+  "employment_rate": "92.1",
+  "salary": "3249"
+},
+{
+  "id": 11,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Electrical and Electronic Engineering",
+  "employment_rate": "91",
+  "salary": "3133"
+},
+{
+  "id": 12,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Environmental Engineering",
+  "employment_rate": "84",
+  "salary": "3091"
+},
+{
+  "id": 13,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Information Engineering and Media",
+  "employment_rate": "85.7",
+  "salary": "3160"
+},
+{
+  "id": 14,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Materials Engineering",
+  "employment_rate": "82.5",
+  "salary": "2989"
+},
+{
+  "id": 15,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Mechanical Engineering",
+  "employment_rate": "91.6",
+  "salary": "3125"
+},
+{
+  "id": 16,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Maritime Studies",
+  "employment_rate": "95.6",
+  "salary": "3050"
+},
+{
+  "id": 17,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Art, Design & Media",
+  "employment_rate": "81.6",
+  "salary": "2639"
+},
+{
+  "id": 18,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Chinese",
+  "employment_rate": "85.1",
+  "salary": "2818"
+},
+{
+  "id": 19,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Communication Studies",
+  "employment_rate": "89.4",
+  "salary": "2893"
+},
+{
+  "id": 20,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Economics",
+  "employment_rate": "89.9",
+  "salary": "3085"
+},
+{
+  "id": 21,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "English",
+  "employment_rate": "82.7",
+  "salary": "3087"
+},
+{
+  "id": 22,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Linguistics and Multilingual Studies",
+  "employment_rate": "90.6",
+  "salary": "2691"
+},
+{
+  "id": 23,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Psychology",
+  "employment_rate": "82.4",
+  "salary": "3007"
+},
+{
+  "id": 24,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Humanities, Arts & Social Sciences",    
+  "degree": "Sociology",
+  "employment_rate": "74.4",
+  "salary": "2980"
+},
+{
+  "id": 25,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Biomedical Sciences **",
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 26,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Biomedical Sciences (Traditional Chinese Medicine) #",
+  "employment_rate": "90.7",
+  "salary": "2840"
+},
+{
+  "id": 27,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Biological Sciences",
+  "employment_rate": "78.6",
+  "salary": "2881"
+},
+{
+  "id": 28,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Chemistry & Biological Chemistry",
+  "employment_rate": "79.8",
+  "salary": "2993"
+},
+{
+  "id": 29,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Mathematics & Economics **",
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 30,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Mathematical Science",
+  "employment_rate": "86",
+  "salary": "3169"
+},
+{
+  "id": 31,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Physics / Applied Physics",
+  "employment_rate": "80.8",
+  "salary": "3164"
+},
+{
+  "id": 32,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "College of Sciences",
+  "degree": "Sports Science and Management",
+  "employment_rate": "68.2",
+  "salary": "2968"
+},
+{
+  "id": 33,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "National Institute of Education (NIE)",
+  "degree": "Science (with Education)",
+  "employment_rate": "100",
+  "salary": "3377"
+},
+{
+  "id": 34,
+  "year": "2013",
+  "university": "Nanyang Technological University",
+  "school": "National Institute of Education (NIE)",
+  "degree": "Arts (with Education)",
+  "employment_rate": "100",
+  "salary": "3413"
+},
+{
+  "id": 35,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Arts & Social Sciences",
+  "degree": "Bachelor of Arts",
+  "employment_rate": "84.8",
+  "salary": "2741"
+},
+{
+  "id": 36,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Arts & Social Sciences",
+  "degree": "Bachelor of Arts (Hons)",
+  "employment_rate": "86.6",
+  "salary": "3057"
+},
+{
+  "id": 37,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Arts & Social Sciences",
+  "degree": "Bachelor of Social Sciences",
+  "employment_rate": "88.1",
+  "salary": "3098"
+},
+{
+  "id": 38,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "NUS Business School",
+  "degree": "Bachelor of Business Administration",
+  "employment_rate": "88.7",
+  "salary": "2960"
+},
+{
+  "id": 39,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "NUS Business School",
+  "degree": "Bachelor of Business Administration (Hons)",       
+  "employment_rate": "94.6",
+  "salary": "3404"
+},
+{
+  "id": 40,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "NUS Business School",
+  "degree": "Bachelor of Business Administration (Accountancy)",
+  "employment_rate": "93.3",
+  "salary": "2740"
+},
+{
+  "id": 41,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "NUS Business School",
+  "degree": "Bachelor of Business Administration (Accountancy) (Hons)",
+  "employment_rate": "97.2",
+  "salary": "3065"
+},
+{
+  "id": 42,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Communications and Media)", 
+  "employment_rate": "88.9",
+  "salary": "3350"
+},
+{
+  "id": 43,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Computational Biology) **", 
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 44,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Computer Engineering) **",  
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 45,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Computer Science)",
+  "employment_rate": "92.4",
+  "salary": "3933"
+},
+{
+  "id": 46,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Electronic Commerce)",      
+  "employment_rate": "88.9",
+  "salary": "3277"
+},
+{
+  "id": 47,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Aerospace Engineering",
+  "employment_rate": "84.6",
+  "salary": "3715"
+},
+{
+  "id": 48,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Computing",
+  "degree": "Bachelor of Computing (Information Systems)",      
+  "employment_rate": "89.2",
+  "salary": "3266"
+},
+{
+  "id": 49,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Dentistry",
+  "degree": "Bachelor of Dental Surgery",
+  "employment_rate": "100",
+  "salary": "4106"
+},
+{
+  "id": 50,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Design & Environment",
+  "degree": "Bachelor of Arts (Architecture) ** #",
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 51,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Design & Environment",
+  "degree": "Bachelor of Arts (Industrial Design)",
+  "employment_rate": "82.1",
+  "salary": "3007"
+},
+{
+  "id": 52,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Design & Environment",
+  "degree": "Bachelor of Science (Project and Facilities Management)",
+  "employment_rate": "96.8",
+  "salary": "2961"
+},
+{
+  "id": 53,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "School of Design & Environment",
+  "degree": "Bachelor of Science (Real Estate)",
+  "employment_rate": "89.2",
+  "salary": "2839"
+},
+{
+  "id": 54,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Bioengineering)",
+  "employment_rate": "74",
+  "salary": "2823"
+},
+{
+  "id": 55,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Chemical Engineering)",   
+  "employment_rate": "93.2",
+  "salary": "3245"
+},
+{
+  "id": 56,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Civil Engineering)",      
+  "employment_rate": "96.1",
+  "salary": "3140"
+},
+{
+  "id": 57,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Computer Engineering)",   
+  "employment_rate": "88.9",
+  "salary": "3592"
+},
+{
+  "id": 58,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Electrical Engineering)", 
+  "employment_rate": "88.5",
+  "salary": "3286"
+},
+{
+  "id": 59,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Engineering Science)",    
+  "employment_rate": "86.2",
+  "salary": "2940"
+},
+{
+  "id": 60,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Environmental Engineering)",
+  "employment_rate": "93.8",
+  "salary": "3153"
+},
+{
+  "id": 61,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Industrial and Systems Engineering)",
+  "employment_rate": "93.9",
+  "salary": "3330"
+},
+{
+  "id": 62,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Materials Science and Engineering)",
+  "employment_rate": "90.9",
+  "salary": "3036"
+},
+{
+  "id": 63,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Engineering",
+  "degree": "Bachelor of Engineering (Mechanical Engineering)", 
+  "employment_rate": "89.1",
+  "salary": "3155"
+},
+{
+  "id": 64,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Law",
+  "degree": "Bachelor of Laws (LLB) (Hons) #",
+  "employment_rate": "98.8",
+  "salary": "4922"
+},
+{
+  "id": 65,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "YLL School of Medicine",
+  "degree": "Bachelor of Medicine and Bachelor of Surgery (MBBS) #",
+  "employment_rate": "100",
+  "salary": "4406"
+},
+{
+  "id": 66,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "YLL School of Medicine",
+  "degree": "Bachelor of Science (Nursing)",
+  "employment_rate": "97.5",
+  "salary": "2687"
+},
+{
+  "id": 67,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "YLL School of Medicine",
+  "degree": "Bachelor of Science (Nursing) (Hons)",
+  "employment_rate": "100",
+  "salary": "2896"
+},
+{
+  "id": 68,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Yong Siew Toh Conservatory of Music",
+  "degree": "Bachelor of Music **",
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 69,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Applied Science **",
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 70,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Applied Science (Hons)",
+  "employment_rate": "97.3",
+  "salary": "2850"
+},
+{
+  "id": 71,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Science",
+  "employment_rate": "80.9",
+  "salary": "2726"
+},
+{
+  "id": 72,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Science (Hons)",
+  "employment_rate": "83.6",
+  "salary": "3101"
+},
+{
+  "id": 73,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Science (Computational Biology) **",   
+  "employment_rate": "na",
+  "salary": "na"
+},
+{
+  "id": 74,
+  "year": "2013",
+  "university": "National University of Singapore",
+  "school": "Faculty of Science",
+  "degree": "Bachelor of Science (Pharmacy) (Hons) #",
+  "employment_rate": "96.4",
+  "salary": "3473"
+},
+{
+  "id": 75,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Accountancy (4-year programme) *",       
+  "degree": "Accountancy (4-years programme)",
+  "employment_rate": "94.2",
+  "salary": "3231"
+},
+{
+  "id": 76,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Accountancy (4-year programme) *",       
+  "degree": "Accountancy (4-years programme) Cum Laude and above",
+  "employment_rate": "95.2",
+  "salary": "3580"
+},
+{
+  "id": 77,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Business (4-year programme) *",
+  "degree": "Business Management (4-years programme)",
+  "employment_rate": "93.2",
+  "salary": "3344"
+},
+{
+  "id": 78,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Business (4-year programme) *",
+  "degree": "Business Management (4-years programme) Cum Laude and above",
+  "employment_rate": "95.9",
+  "salary": "3825"
+},
+{
+  "id": 79,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Economics (4-year programme) *",
+  "degree": "Economics (4-years programme)",
+  "employment_rate": "90.6",
+  "salary": "3389"
+},
+{
+  "id": 80,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Economics (4-year programme) *",
+  "degree": "Economics (4-years programme) Cum Laude and above",
+  "employment_rate": "94",
+  "salary": "3731"
+},
+{
+  "id": 81,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Information Systems (4-year programme) *",
+  "degree": "Information Systems Management (4-years programme)",
+  "employment_rate": "93.6",
+  "salary": "3389"
+},
+{
+  "id": 82,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Information Systems (4-year programme) *",
+  "degree": "Information Systems Management (4-years programme) Cum Laude and above",
+  "employment_rate": "100",
+  "salary": "3786"
+},
+{
+  "id": 83,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Social Sciences (4-year programme) *",   
+  "degree": "Social Sciences (4-years programme)",
+  "employment_rate": "86.5",
+  "salary": "3122"
+},
+{
+  "id": 84,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Social Sciences (4-year programme) *",   
+  "degree": "Social Sciences (4-years programme) Cum Laude and above",
+  "employment_rate": "87.5",
+  "salary": "3251"
+},
+{
+  "id": 85,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Law (4-year programme) *",
+  "degree": "Law (4-years programme) #",
+  "employment_rate": "100",
+  "salary": "5023"
+},
+{
+  "id": 86,
+  "year": "2013",
+  "university": "Singapore Management University",
+  "school": "School of Law (4-year programme) *",
+  "degree": "Law (4-years programme) Cum Laude and above #",    
+  "employment_rate": "100",
+  "salary": "5329"
+},
+{
+  "id": 87,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Accountancy and Business",
+  "employment_rate": "98.2",
+  "salary": "3539"
+},
+{
+  "id": 88,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Accountancy (3-yr direct Honours Programme)",      
+  "employment_rate": "96.6",
+  "salary": "2981"
+},
+{
+  "id": 89,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Business (3-yr direct Honours Programme)",
+  "employment_rate": "89.6",
+  "salary": "3231"
+},
+{
+  "id": 90,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Business (Nanyang Business School)",    
+  "degree": "Business and Computing",
+  "employment_rate": "92.9",
+  "salary": "3398"
+},
+{
+  "id": 91,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Bioengineering",
+  "employment_rate": "79.8",
+  "salary": "2998"
+},
+{
+  "id": 92,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Chemical and Biomolecular Engineering",
+  "employment_rate": "83.8",
+  "salary": "3296"
+},
+{
+  "id": 93,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Computer Engineering",
+  "employment_rate": "91.4",
+  "salary": "3423"
+},
+{
+  "id": 94,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Civil Engineering",
+  "employment_rate": "93.8",
+  "salary": "3122"
+},
+{
+  "id": 95,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Computer Science",
+  "employment_rate": "94.5",
+  "salary": "3269"
+},
+{
+  "id": 96,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Electrical and Electronic Engineering",
+  "employment_rate": "90.7",
+  "salary": "3241"
+},
+{
+  "id": 97,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Environmental Engineering",
+  "employment_rate": "88.9",
+  "salary": "3121"
+},
+{
+  "id": 98,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Information Engineering and Media",
+  "employment_rate": "85.7",
+  "salary": "3185"
+},
+{
+  "id": 99,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Materials Engineering",
+  "employment_rate": "82.5",
+  "salary": "3145"
+},
+{
+  "id": 100,
+  "year": 2014,
+  "university": "Nanyang Technological University",
+  "school": "College of Engineering",
+  "degree": "Mechanical Engineering",
+  "employment_rate": "90.2",
+  "salary": "3161"
+}
+
+
+]

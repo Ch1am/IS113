@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Star Headline</title>
+</head>
+<body>
+    <% if (success) { %>
+        <h3>Update Successful</h3>
+        <p><%= success %></p>
+        <a href="/display">Back to list</a>
+    <% } else if (star) { %>
+        <h3>Update Star Headline</h3>
+        <form action="/update-headline" method="POST">
+            <table border="1">
+                <tr><th>Name:</th><td><%= star.name %></td></tr>
+                <tr><th>Gender:</th><td><%= star.gender %></td></tr>
+                <tr><th>Headline:</th><td><input type="text" name="headline" value="<%= star.headline %>" size="50"></td></tr>
+                <input type="hidden" name="id" value="<%= star.id %>">
+                <tr><td colspan="2"><button type="submit">Update Info</button></td></tr>
+            </table>
+        </form>
+    <% } else if (error) { %>
+        <h3>Error</h3>
+        <p><%= error %></p>
+        <a href="/display">Back to list</a>
+    <% } else { %>
+        <p>Star not found</p>
+    <% } %>
+</body>
+</html>
